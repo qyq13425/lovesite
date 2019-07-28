@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<title>Responsive HTML5</title>
+
+<!-- SET: FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+<!-- END: FAVICON -->
+
+<!-- SET: STYLESHEET -->
+<link href="css/style.css?v=1.1" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/dd.css">
+<link rel="stylesheet" type="text/css" href="css/font.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.dd.js"></script>
+<script type="text/javascript" src="js/tytabs.jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("select").msDropdown();
+		 $('.menu-icon').click(function(e) {
+           $('nav ul').slideToggle(); 
+        });
+		$("#tabsholder").tytabs({
+			tabinit:"1",
+			fadespeed:"fast"
+		});
+   });
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $(this).parent().toggleClass('checked');
+                $(this).parent().parent().siblings().children().removeClass('checked');
+            }
+            else if($(this).prop("checked") == false){
+                $(this).parent().removeClass('checked');
+            }
+        });
+    });
+</script>
+</head>
+
+<body>
+
+<!-- wrapper starts -->
+<div class="wrapper" style="background:#f2f2f2;">
+	<header>
+    	<div class="container">
+        	<div class="header-in">
+            	<div class="login-top">
+                	<form name="login_top" action="">
+                    	<p><span><img style="padding:8px;" src="images/login-icon1.png"></span><input type="text" value="账号"></p>
+                        <p style="border:#e4e4e4 1px solid"><span><img style="padding:7px 8px 6px 9px;" src="images/login-icon2.png"></span><input type="text" value="密码"></p>
+                        <p style="border:none"><input type="submit" value="登录"><a href="#">注册</a></p>
+                    </form>
+                </div>
+                <div class="third"><a href="#" class="qq">QQ登录</a><a href="#" class="wechat">微信登录</a></div>
+                <a class="menu-icon"><img src="images/menu-cion.png" alt="img" width="30" height="30"></a>
+                <nav style="width:420px;">
+                	<ul>
+                    	<li class="active"><a href="#">交友</a></li>
+                        <li><a href="#">婚恋</a></li>
+                        <li><a href="#">个人中心</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </nav>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <div class="maincontent" style="position:relative; background:url(images/login-back.png) repeat-x left bottom; height:1458px;">
+        <div class="login-banner">
+            <img src="images/login-banner1.png" class="dt">
+            <div class="position1">
+                <p><a href="#" class="first">创建个人资料</a><a href="#" class="second">上传照片，完成注册</a></p><img src="images/login-icon5.png" style="left:156px;"><img src="images/login-icon6.png" style="left:569px;">
+            </div>
+        </div>
+    	<div class="login-content">
+        	<form action="">
+        	<div class="login-block1">
+                <ul>
+                    <li>
+                        <p>性别</p>
+                        <div class="check-block1">
+                            <div class="block">
+                            	<label style="padding:0 0 0 20px;"><input type="checkbox" >男</label>
+                            </div>
+                            <div class="block">
+                            	<label style="padding:0 0 0 20px;"><input type="checkbox" >女</label>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                    	<p>常住地</p>
+                        <div class="select-block1">
+                            <select class="select1" style="width:100%">
+                                <option>山西 大同</option>
+                                <option value="option1">option1</option>
+                                <option value="option2">option2</option>
+                                <option value="option3">option3</option>
+                                <option value="option4">option4</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                        <p>婚姻状况</p>
+                        <div class="check-block1">
+                            <div class="block">
+                            	<label style="padding:0 0 0 20px;"><input type="checkbox" >未婚</label>
+                            </div>
+                            <div class="block">
+                            	<label style="padding:0 0 0 20px;"><input type="checkbox" >离异</label>
+                            </div>
+                            <div class="block">
+                            	<label style="padding:0 0 0 20px;"><input type="checkbox" >丧偶</label>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                    	<p>身高</p>
+                        <div class="select-block1">
+                            <select class="select1" style="width:100%">
+                                <option>175CM</option>
+                                <option value="option1">option1</option>
+                                <option value="option2">option2</option>
+                                <option value="option3">option3</option>
+                                <option value="option4">option4</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                    	<p>学历</p>
+                        <div class="select-block1">
+                            <select class="select1" style="width:100%">
+                                <option>本科</option>
+                                <option value="option1">option1</option>
+                                <option value="option2">option2</option>
+                                <option value="option3">option3</option>
+                                <option value="option4">option4</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                    	<p>月薪</p>
+                        <div class="select-block1">
+                            <select class="select1" style="width:100%">
+                                <option>3000-4000</option>
+                                <option value="option1">option1</option>
+                                <option value="option2">option2</option>
+                                <option value="option3">option3</option>
+                                <option value="option4">option4</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                    <!--提示信息改动-->
+                    	<p>手机号</p>
+                        <input type="text" class="text-field1">
+                        <strong>方便密码找回</strong>
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                    	<p>验证码</p>
+                        <input type="text" class="text-field1" style="width:17%;">
+                        <input type="button" value="获取验证码" class="yzm" style="border:1px solid #e0e0e0;width:20%; background:#f2f2f2; height:30px;padding:4px 10px 6px 2px; font-size:14px; font-family:微软雅黑; color:#595959; cursor:pointer; margin-left:5px;">
+                        <div class="clear"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="login-block2">
+            	<ul>
+                <!--新增一项用户名-->
+                	<li>
+                    	<p>用户名</p>
+                        <input type="text" class="text-field1">
+                        <div class="clear"></div>
+                        <strong>*用户名由字母、数字、下划线组成，一旦设定不可更改</strong>
+                        <div class="clear"></div>
+                    </li>
+                	<li>
+                    	<p>昵称</p>
+                        <input type="text" class="text-field1">
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                    	<p>创建密码</p>
+                        <input type="text" class="text-field1">
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                    	<p>确认密码</p>
+                        <input type="text" class="text-field1">
+                        <div class="clear"></div>
+                    </li>
+                    <li id="tabsholder">
+                    	<p>自我介绍</p>
+                        <div class="tab-introduce">
+                        	<ul class="tabs">
+                            	<li id="tab1"><a>贴标签</a></li>
+                                <li id="tab2"><a>自己写</a></li>
+                                <li style="border:none" id="tab3"><a>帮你写</a></li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="intro-content tabscontent" id="content1">
+                        	<table border="1px"  bordercolor="#e4e4e4" cellspacing="0px" style="border-collapse:collapse">
+                            	<tr align="center"><td><a href="#">独立</a></td><td><a href="#">靠谱</a></td><td><a href="#">完美主义</a></td></tr>
+                                <tr align="center"><td><a href="#">大大咧咧</td><td><a href="#">网游</a></td><td><a href="#">摄影</a></td></tr>
+                                <tr align="center"><td><a href="#">麦霸</td><td><a href="#">IT业</a></td><td><a href="#">媒体业</a></td></tr>
+                                <tr align="center"><td><a href="#">工作狂</td><td></td><td></td></tr>
+                                <tr align="center"><td></td><td></td><td></td></tr>
+                                <tr align="center"><td></td><td></td><td></td></tr>
+                            </table>
+                        </div>
+                        <div class="intro-content tabscontent" id="content2" style="padding:0">
+                        	<textarea></textarea>
+                        </div>
+                        <div class="intro-content tabscontent" id="content3" style="padding:0">
+                        	<div class="helpwrite">
+                            	<h3>我的性格特点是：</h3>
+                        		<input type="text" class="text-field1" style="float:none; margin-left:0; display:block; width:90%; margin-bottom:11px;">
+                                <h3>业余时间我喜欢：</h3>
+                        		<input type="text" class="text-field1" style="float:none; margin-left:0; display:block; width:90%; margin-bottom:11px;">
+                                <h3>我憧憬的生活是：</h3>
+                        		<input type="text" class="text-field1" style="float:none; margin-left:0; display:block; width:90%; margin-bottom:11px;">
+                                <h3>我希望另一半是：</h3>
+                        		<input type="text" class="text-field1" style="float:none; margin-left:0; display:block; width:90%;">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    <!--注册条款添加a标签-->
+                        <div class="check-block1">
+                            <div class="block">
+                            	<label style="padding:0 0 0 20px;"><input type="checkbox" ><a href="#" class="tiaokuan">我同意注册条款和会员加入标准</a></label>
+                            </div>
+                        </div>
+                	</li>
+                </ul>
+                <div class="clear"></div>
+            	<div class="next-block"><input value="下一步" type="submit"></div>
+            </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+    </footer>
+</div>
+
+</body>
+</html>

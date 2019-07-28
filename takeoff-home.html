@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<title>Responsive HTML5</title>
+
+<!-- SET: FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+<!-- END: FAVICON -->
+
+<!-- SET: STYLESHEET -->
+<link href="css/style.css?v=1.1" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+<!-- END: STYLESHEET -->
+
+<!-- SET: SCRIPTS -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+        $('.bxslider').bxSlider({
+			auto:true
+	    });
+		$('.menu-icon').click(function(e) {
+           $('nav ul').slideToggle(); 
+        });
+		size_li = $("#myList li").size();
+		x=8;
+		$('#myList li:lt('+x+')').show();
+		$('#loadMore').click(function () {
+			x= (x+4 <= size_li) ? x+4 : size_li;
+			$('#myList li:lt('+x+')').show();
+		});
+		$('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $(this).parent().toggleClass('checked');
+            }
+            else if($(this).prop("checked") == false){
+                $(this).parent().removeClass('checked');
+            }
+        });
+		
+    });
+</script>
+<!-- END: SCRIPTS -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<![endif]-->
+<!-- END: SCRIPTS -->
+<!--[if IE 8]>
+<style type="text/css">
+nav ul li{padding: 28px 42px 26px;}
+ 
+</style>
+<![endif]-->
+</head>
+
+<body style="background:#f7f7f7;">
+
+<!-- wrapper starts -->
+<div class="wrapper">
+    <!-- Header Starts -->
+    <header>
+    	<div class="container">
+        	<div class="header-in">
+            	<div class="logo"><a href="#"><img src="images/logo.png" alt="img" ></a></div>
+                <a class="menu-icon"><img src="images/menu-cion.png" alt="img" width="30" height="30"></a>
+                <nav>
+                	<ul>
+                    	<li class="active"><a href="#">交友</a></li>
+                        <li><a href="#">婚恋</a></li>
+                        <li><a href="#">活动</a></li>
+                        <li><a href="#">登录/注册</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </nav>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <!-- Header ends -->
+    <div class="slider">
+    	<ul class="bxslider">
+        	<li><img src="images/slider.jpg" alt="img" width="1920" height="519"></li>
+            <li><img src="images/slider.jpg" alt="img" width="1920" height="519"></li>
+            <li><img src="images/slider.jpg" alt="img" width="1920" height="519"></li>
+        </ul>
+    </div>
+    
+    <div class="feature-nav">
+    	<div class="container">	
+        	<div class="nav-in">
+            	<ul>
+                	<li><a href="#" class="love_h_c">约会</a></li>
+                    <li><a href="#" >恋爱</a></li>
+                    <li><a href="#">小伙伴</a></li>
+                    <li><a href="#" >爱秀</a></li>
+                    <li><a href="#">脱单宝典</a></li>
+                    <li class="last"><a href="#">树洞</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!-- maincontent Starts -->
+    <div class="maincontent">
+    	<div class="container">
+        	<div class="main-in">
+                <div class="admin-nav">	
+                	<ul>
+                    	<li><a href="#">首页</a></li>
+                        <li class="no_bg"><a href="#">脱单宝典</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div style="overflow:hidden;" class="love-block">
+                	<a class="app-01" href="#">按时间排序</a>
+                    <a class="app-02" href="#">按热度排序</a>
+                    <div class="field-block" style="margin-top:30px; display:inline-block; float:left; margin-bottom:0; margin-left:2%;">
+                        <div class="check-block" style="padding:0px 0px 0px 0px; display:inline-block; padding-top:0px; line-height:28px;">
+                            <label style="width:100%; font-family:微软雅黑;">
+                                <input type="checkbox">约会活动
+                            </label>
+                        </div>
+                        <div class="check-block" style="padding:0px 0px 0px 0px; display:inline-block; padding-top:0px; line-height:28px; margin-left:60px;">
+                            <label style="width:100%; font-family:微软雅黑;">
+                                <input type="checkbox">约会地点
+                            </label>
+                        </div>
+                        <div class="check-block" style="padding:0px 0px 0px 0px; display:inline-block; padding-top:0px; line-height:28px; margin-left:60px;">
+                            <label style="width:100%; font-family:微软雅黑;">
+                                <input type="checkbox">约会顾问
+                            </label>
+                        </div>
+                        <div class="check-block" style="padding:0px 0px 0px 0px; display:inline-block; padding-top:0px; line-height:28px; margin-left:60px;">
+                            <label style="width:100%; font-family:微软雅黑;">
+                                <input type="checkbox">官方推荐
+                            </label>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!--新加搜索按钮 输入框的class变成init1-->
+                    <input type="text" value="" name="keyword" placeholder="关键字搜索"  class="init1" style="margin-left:10%">
+                    <a href="#"><img src="images/search-icon1.png"></a>
+                </div>
+                <div class="clear"></div>
+                <div class="takeoff-left">
+                <!--查看详情的a标签变成可点击-->
+                    <section class="takeoff-block">
+                        <ul>
+                            <li>
+                                <div class="takeoff1">
+                                    <img src="images/girl-img2.png">
+                                    <h2>小白铲屎官</h2>
+                                    <p>约会地点推荐</p>
+                                    <span>2016-1-23</span>
+                                    <a href="#">查看详情</a>
+                                </div>
+                                <div class="takeoff2">
+                                    <a href="#" class="titl">选对约会地点，拿下女神不是梦！^-^</a>
+                                    <h2>选对约会地点，拿下女神不是梦！^-^</h2>
+                                    <h3>2016-1-23</h3>
+                                    <p>沐•咖啡位于沃尔玛对面金华园底商，优雅的音乐加上舒适的环境，为您提供一个惬意的休闲港湾。一杯咖啡最好的温度，是85度，不是沸腾，不是温凉。它是在期许温度里散发出不紧不慢的丝丝醇香，是握在冰凉的手心里刚刚好的温度，是送到唇边冷暖相偎的妥贴。在寒冷的冬日里值得双手交握的，是这样低调的温暖，却是能让思绪在弥香中渐渐清晰，在不急不躁中慢慢细品和回味，有些幸福自己最清楚，就像咖啡的香甜中搀着微微的苦。
+    </p>
+                                    <span><em>21</em><b>被<a>19408</a>人喜欢</b></span>
+                                </div>
+                                <img src="images/xb-lt.png" class="xb">
+                            </li>
+                            <li>
+                                <div class="takeoff1">
+                                    <img src="images/girl-img2.png">
+                                    <h2>小白铲屎官</h2>
+                                    <p>约会地点推荐</p>
+                                    <span>2016-1-23</span>
+                                    <a href="#">查看详情</a>
+                                </div>
+                                <div class="takeoff2">
+                                    <a href="#" class="titl">选对约会地点，拿下女神不是梦！^-^</a>
+                                    <h2>选对约会地点，拿下女神不是梦！^-^</h2>
+                                    <h3>2016-1-23</h3>
+                                    <p>沐•咖啡位于沃尔玛对面金华园底商，优雅的音乐加上舒适的环境，为您提供一个惬意的休闲港湾。一杯咖啡最好的温度，是85度，不是沸腾，不是温凉。它是在期许温度里散发出不紧不慢的丝丝醇香，是握在冰凉的手心里刚刚好的温度，是送到唇边冷暖相偎的妥贴。在寒冷的冬日里值得双手交握的，是这样低调的温暖，却是能让思绪在弥香中渐渐清晰，在不急不躁中慢慢细品和回味，有些幸福自己最清楚，就像咖啡的香甜中搀着微微的苦。
+    </p>
+                                    <span><em>21</em><b>被<a>19408</a>人喜欢</b></span>
+                                </div>
+                                <img src="images/xb-lt.png" class="xb">
+                            </li>
+                            <li>
+                                <div class="takeoff1">
+                                    <img src="images/girl-img2.png">
+                                    <h2>小白铲屎官</h2>
+                                    <p>约会地点推荐</p>
+                                    <span>2016-1-23</span>
+                                    <a href="#">查看详情</a>
+                                </div>
+                                <div class="takeoff2">
+                                    <a href="#" class="titl">选对约会地点，拿下女神不是梦！^-^</a>
+                                    <h2>选对约会地点，拿下女神不是梦！^-^</h2>
+                                    <h3>2016-1-23</h3>
+                                    <p>沐•咖啡位于沃尔玛对面金华园底商，优雅的音乐加上舒适的环境，为您提供一个惬意的休闲港湾。一杯咖啡最好的温度，是85度，不是沸腾，不是温凉。它是在期许温度里散发出不紧不慢的丝丝醇香，是握在冰凉的手心里刚刚好的温度，是送到唇边冷暖相偎的妥贴。在寒冷的冬日里值得双手交握的，是这样低调的温暖，却是能让思绪在弥香中渐渐清晰，在不急不躁中慢慢细品和回味，有些幸福自己最清楚，就像咖啡的香甜中搀着微微的苦。
+    </p>
+                                    <span><em>21</em><b>被<a>19408</a>人喜欢</b></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="takeoff1">
+                                    <img src="images/girl-img2.png">
+                                    <h2>小白铲屎官</h2>
+                                    <p>约会地点推荐</p>
+                                    <span>2016-1-23</span>
+                                    <a href="#">查看详情</a>
+                                </div>
+                                <div class="takeoff2">
+                                    <a href="#" class="titl">选对约会地点，拿下女神不是梦！^-^</a>
+                                    <h2>选对约会地点，拿下女神不是梦！^-^</h2>
+                                    <h3>2016-1-23</h3>
+                                    <p>沐•咖啡位于沃尔玛对面金华园底商，优雅的音乐加上舒适的环境，为您提供一个惬意的休闲港湾。一杯咖啡最好的温度，是85度，不是沸腾，不是温凉。它是在期许温度里散发出不紧不慢的丝丝醇香，是握在冰凉的手心里刚刚好的温度，是送到唇边冷暖相偎的妥贴。在寒冷的冬日里值得双手交握的，是这样低调的温暖，却是能让思绪在弥香中渐渐清晰，在不急不躁中慢慢细品和回味，有些幸福自己最清楚，就像咖啡的香甜中搀着微微的苦。
+    </p>
+                                    <span><em>21</em><b>被<a>19408</a>人喜欢</b></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="takeoff1">
+                                    <img src="images/girl-img2.png">
+                                    <h2>小白铲屎官</h2>
+                                    <p>约会地点推荐</p>
+                                    <span>2016-1-23</span>
+                                    <a href="#">查看详情</a>
+                                </div>
+                                <div class="takeoff2">
+                                    <a href="#" class="titl">选对约会地点，拿下女神不是梦！^-^</a>
+                                    <h2>选对约会地点，拿下女神不是梦！^-^</h2>
+                                    <h3>2016-1-23</h3>
+                                    <p>沐•咖啡位于沃尔玛对面金华园底商，优雅的音乐加上舒适的环境，为您提供一个惬意的休闲港湾。一杯咖啡最好的温度，是85度，不是沸腾，不是温凉。它是在期许温度里散发出不紧不慢的丝丝醇香，是握在冰凉的手心里刚刚好的温度，是送到唇边冷暖相偎的妥贴。在寒冷的冬日里值得双手交握的，是这样低调的温暖，却是能让思绪在弥香中渐渐清晰，在不急不躁中慢慢细品和回味，有些幸福自己最清楚，就像咖啡的香甜中搀着微微的苦。
+    </p>
+                                    <span><em>21</em><b>被<a>19408</a>人喜欢</b></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="takeoff1">
+                                    <img src="images/girl-img2.png">
+                                    <h2>小白铲屎官</h2>
+                                    <p>约会地点推荐</p>
+                                    <span>2016-1-23</span>
+                                    <a href="#">查看详情</a>
+                                </div>
+                                <div class="takeoff2">
+                                    <a href="#" class="titl">选对约会地点，拿下女神不是梦！^-^</a>
+                                    <h2>选对约会地点，拿下女神不是梦！^-^</h2>
+                                    <h3>2016-1-23</h3>
+                                    <p>沐•咖啡位于沃尔玛对面金华园底商，优雅的音乐加上舒适的环境，为您提供一个惬意的休闲港湾。一杯咖啡最好的温度，是85度，不是沸腾，不是温凉。它是在期许温度里散发出不紧不慢的丝丝醇香，是握在冰凉的手心里刚刚好的温度，是送到唇边冷暖相偎的妥贴。在寒冷的冬日里值得双手交握的，是这样低调的温暖，却是能让思绪在弥香中渐渐清晰，在不急不躁中慢慢细品和回味，有些幸福自己最清楚，就像咖啡的香甜中搀着微微的苦。
+    </p>
+                                    <span><em>21</em><b>被<a>19408</a>人喜欢</b></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <!--分页栏最后一项删除-->
+                    <div class="fanye-block" style=" margin-bottom:100px;">
+                        <ul>
+                            <li><a href="#" class="active" style="width:54px;">首页</a></li>
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#" class="active" style="width:54px;">尾页</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ax_de_right flt_rt" style="margin-top:54px;">
+                
+                    <!--右边一大块内容变化-->
+                    <h2>推荐约会</h2>
+                        <ul class="ul1">
+                            <li style="display: list-item;">
+                            	<p>
+                                    <em><img src="images/arrowl.png" alt="img" width="8" height="10"></em>
+                                    <a href="#">“振兴街那边新开了一家日式料理，朋友去过说很正宗，近期想约一位吃货一起去品尝，我请客哈！ 时间商议。” </a>
+                                </p>
+                                <h1><span>2015-11-26 11:08</span><a href="#">小白铲屎官</a></h1>
+                            </li>
+                            <li style="display: list-item;">
+                            	<p>
+                                    <em><img src="images/arrowl.png" alt="img" width="8" height="10"></em>
+                                    <a href="#">“振兴街那边新开了一家日式料理，朋友去过说很正宗，近期想约一位吃货一起去品尝，我请客哈！ 时间商议。” </a>
+                                </p>
+                                <h1><span>2015-11-26 11:08</span><a href="#">小白铲屎官</a></h1>
+                            </li>
+                            <li style="display: list-item;">
+                            	<p>
+                                    <em><img src="images/arrowl.png" alt="img" width="8" height="10"></em>
+                                    <a href="#">“振兴街那边新开了一家日式料理，朋友去过说很正宗，近期想约一位吃货一起去品尝，我请客哈！ 时间商议。” </a>
+                                </p>
+                                <h1><span>2015-11-26 11:08</span><a href="#">小白铲屎官</a></h1>
+                            </li>
+                            <li style="display: list-item;">
+                            	<p>
+                                    <em><img src="images/arrowl.png" alt="img" width="8" height="10"></em>
+                                    <a href="#">“振兴街那边新开了一家日式料理，朋友去过说很正宗，近期想约一位吃货一起去品尝，我请客哈！ 时间商议。” </a>
+                                </p>
+                                <h1><span>2015-11-26 11:08</span><a href="#">小白铲屎官</a></h1>
+                            </li>
+                            <li style="display: list-item;">
+                            	<p>
+                                    <em><img src="images/arrowl.png" alt="img" width="8" height="10"></em>
+                                    <a href="#">“振兴街那边新开了一家日式料理，朋友去过说很正宗，近期想约一位吃货一起去品尝，我请客哈！ 时间商议。” </a>
+                                </p>
+                                <h1><span>2015-11-26 11:08</span><a href="#">小白铲屎官</a></h1>
+                            </li>
+                        </ul>
+                        <h2>推荐恋爱</h2>
+                        <ul class="ul2">
+                            <li style="display: list-item;">
+                            	<div class="detail2">
+                                	<em><img src="images/arrowl.png" alt="img" width="8" height="10"></em>
+                                    <h1><a href="#">vivian</a><br><span>狮子座   25岁  女  170CM   50KG</span></h1>
+                                    <a href="#"><img src="images/yhxq_tx1.png" width="71" height="71" class="r"></a>
+                                </div>
+                            </li>
+                            <li style="display: list-item;">
+                            	<div class="detail2">
+                                	<em><img src="images/arrowl.png" alt="img" width="8" height="10"></em>
+                                    <h1><a href="#">vivian</a><br><span>狮子座   25岁  女  170CM   50KG</span></h1>
+                                    <a href="#"><img src="images/yhxq_tx1.png" width="71" height="71" class="r"></a>
+                                </div>
+                            </li>
+                            <li style="display: list-item;">
+                            	<div class="detail2">
+                                	<em><img src="images/arrowl.png" alt="img" width="8" height="10"></em>
+                                    <h1><a href="#">vivian</a><br><span>狮子座   25岁  女  170CM   50KG</span></h1>
+                                    <a href="#"><img src="images/yhxq_tx1.png" width="71" height="71" class="r"></a>
+                                </div>
+                            </li>
+                            <li style="display: list-item;">
+                            	<div class="detail2">
+                                	<em><img src="images/arrowl.png" alt="img" width="8" height="10"></em>
+                                    <h1><a href="#">vivian</a><br><span>狮子座   25岁  女  170CM   50KG</span></h1>
+                                    <a href="#"><img src="images/yhxq_tx1.png" width="71" height="71" class="r"></a>
+                                </div>
+                            </li>
+                            <li style="display: list-item;">
+                            	<div class="detail2">
+                                	<em><img src="images/arrowl.png" alt="img" width="8" height="10"></em>
+                                    <h1><a href="#">vivian</a><br><span>狮子座   25岁  女  170CM   50KG</span></h1>
+                                    <a href="#"><img src="images/yhxq_tx1.png" width="71" height="71" class="r"></a>
+                                </div>
+                            </li>
+                            <li style="display: list-item;">
+                            	<div class="detail2">
+                                	<em><img src="images/arrowl.png" alt="img" width="8" height="10"></em>
+                                    <h1><a href="#">vivian</a><br><span>狮子座   25岁  女  170CM   50KG</span></h1>
+                                    <a href="#"><img src="images/yhxq_tx1.png" width="71" height="71" class="r"></a>
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+    </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<title>Responsive HTML5</title>
+
+<!-- SET: FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+<!-- END: FAVICON -->
+
+<!-- SET: STYLESHEET -->
+<link href="css/style.css?v=1.1" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/dd.css">
+<link rel="stylesheet" type="text/css" href="css/font.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.dd.js"></script>
+<script type="text/javascript" src="js/tytabs.jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("select").msDropdown();
+		 $('.menu-icon').click(function(e) {
+           $('nav ul').slideToggle(); 
+        });
+		$("#tabsholder").tytabs({
+			tabinit:"1",
+			fadespeed:"fast"
+		});
+   });
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $(this).parent().toggleClass('checked');
+                $(this).parent().parent().siblings().children().removeClass('checked');
+            }
+            else if($(this).prop("checked") == false){
+                $(this).parent().removeClass('checked');
+            }
+        });
+    });
+</script>
+</head>
+
+<body>
+
+<!-- wrapper starts -->
+<div class="wrapper" style="background:#f2f2f2;">
+	<header>
+    	<div class="container">
+        	<div class="header-in">
+            	<div class="login-top">
+                	<form name="login_top" action="">
+                    	<p><span><img style="padding:8px;" src="images/login-icon1.png"></span><input type="text" value="账号"></p>
+                        <p style="border:#e4e4e4 1px solid"><span><img style="padding:7px 8px 6px 9px;" src="images/login-icon2.png"></span><input type="text" value="密码"></p>
+                        <p style="border:none"><input type="submit" value="登录"><a href="#">注册</a></p>
+                    </form>
+                </div>
+                <div class="third"><a href="#" class="qq">QQ登录</a><a href="#" class="wechat">微信登录</a></div>
+                <a class="menu-icon"><img src="images/menu-cion.png" alt="img" width="30" height="30"></a>
+                <nav style="width:420px;">
+                	<ul>
+                    	<li class="active"><a href="#">交友</a></li>
+                        <li><a href="#">婚恋</a></li>
+                        <li><a href="#">个人中心</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </nav>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <div class="maincontent" style="position:relative;">
+    	<img src="images/login3-back.png" width="100%" height="100%" >
+        <div class="success-content">
+        	<img src="images/hook-icon.png">
+            <div class="float-l">
+                <h2>注册成功</h2>
+            	<p>注册完毕只是脱单路上的第一步<br><span>约会</span>才是正经事<br>赶快去发布你的<a href="#">第一张约会卡片</a>吧</p>
+                <p>3秒后转到首页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">点击立即跳转</a></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+    </footer>
+</div>
+
+</body>
+</html>

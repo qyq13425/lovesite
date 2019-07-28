@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<title>Responsive HTML5</title>
+
+<!-- SET: FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+<!-- END: FAVICON -->
+
+<!-- SET: STYLESHEET -->
+<link href="css/style.css?v=1.1" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/dd.css">
+<link rel="stylesheet" type="text/css" href="css/font.css">
+<!-- END: STYLESHEET -->
+
+<!-- SET: SCRIPTS -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.dd.js"></script>
+<script type="text/javascript" src="js/tytabs.jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("select").msDropdown();
+		 $('.menu-icon').click(function(e) {
+           $('nav ul').slideToggle(); 
+        });
+		$(".accordian-block ul li:nth-child(1) .check-sec").show();
+		$(".accordian-block ul li:nth-child(1) a").addClass('active');
+		$(".accordian-block ul li a").click(function(){
+			$(this).parent().find(".check-sec").slideToggle("slow");
+			$(this).parent().siblings().find(".check-sec").slideUp("slow");
+			$(this).toggleClass("active");
+			$(this).eq(155).addClass("active");
+			$(this).parent().siblings().find('a').removeClass("active");
+						
+	   });
+		
+		$('.bar-percentage[data-percentage]').each(function () {
+	  var progress = $(this);
+	  var percentage = Math.ceil($(this).attr('data-percentage'));
+	  $({countNum: 0}).animate({countNum: percentage}, {
+		duration: 2000,
+		easing:'linear',
+		step: function() {
+		  // What todo on every count
+		  var pct = Math.floor(this.countNum) ;
+		  progress.text(pct) && progress.parent().siblings().children().css('width',pct+'%');
+		}
+	  });
+	});
+		
+   });
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $(this).parent().toggleClass('checked');
+            }
+            else if($(this).prop("checked") == false){
+                $(this).parent().removeClass('checked');
+            }
+        });
+    });
+</script>
+<!-- END: SCRIPTS -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js">
+</script>
+<![endif]-->
+</head>
+
+<body>
+
+<!-- wrapper starts -->
+<div class="wrapper">
+    <!-- Header Starts -->
+    <header>
+    	<div class="container">
+        	<div class="header-in">
+            	<div class="logo logo1"><a href="#"><img src="images/logo.png" alt="img" ></a></div>
+                <a class="menu-icon"><img src="images/menu-cion.png" alt="img" width="30" height="30"></a>
+                <nav>
+                	<ul class="nav1">
+                        <li><a href="#">交友</a></li>
+                        <li><a href="#">婚恋</a></li>
+                        <li class="active"><a href="#">个人中心</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </nav>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <!-- Header ends -->
+    
+    
+    <div class="feature-nav">
+    	<div class="container">	
+        	<div class="nav-in nav-in1">
+            	<ul>
+                	<li><a href="#">消息</a></li>
+                    <li><a href="#">站内信</a></li>
+                    <li><a href="#">通知</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!-- maincontent Starts -->
+    
+    <!-- maincontent ends -->
+    <div class="admin-section">
+    	<div class="container">
+        	<div class="admin-in">
+            	<div class="admin-nav">	
+                	<ul>
+                    	<li><a href="#">首页</a></li>
+                        <li class="no_bg"><a href="#">个人中心</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="admin-content">
+                	<div class="admin-left">
+                    	<em><img src="images/girl-img3.png" alt="img" width="170" height="170"></em>
+                        <strong>小白铲屎官</strong>
+                        <ul>
+                        <!--新增导航栏爱秀-->
+                        	<li class="active"><a href="#">TA的资料</a></li>
+                            <li><a href="#">TA发布的约会</a></li>
+                            <li><a href="#">TA发布的恋爱</a></li>
+                            <li><a href="#">TA发布的爱秀</a></li>
+                            <li class="no_border"><a href="#">TA的相册</a></li>
+                        </ul>
+                        <!--关注TA的a标签变成button 增加js-->
+                        <input type="button" onclick="gz();" name="button1" class="yk_btnblue" value="关注TA">
+                        <a class="yk_btnred" href="#">私信TA</a>
+                        <script>
+							var button1=document.getElementsByName("button1");
+							function gz(){
+								button1[0].value="已关注";
+							}
+						</script>
+                    </div>
+                    <div class="admin-right" id="tabsholder">
+                        <div class="tab-content tabscontent" style="padding:0">
+                        	<div class="title-block">
+                            	<h1><span>会员86806405</span><a href="#"><img src="images/mobile-phone.png"></a><a href="#"><img src="images/letter.png"></a></h1>
+                                <h2 class="clear"></h2>
+                                <p><span>ID:86806405</span></p>
+                            </div>
+                            <div class="preview-block">
+                            	<div class="preview1">
+                                	<span>年龄：<em>31岁</em></span><span>身高：<em>169CM</em></span><span>月收入：<em>5001-8000元</em></span><span>婚况：<em>未婚</em></span><span>学历：<em>大学本科</em></span><span>工作地：<em>山西大同</em></span><span>职业：<em>--</em></span><span>星座：<em>狮子座</em></span><span>籍贯：<em>--</em></span></span>
+                                </div>
+                                <div class="preview2">
+                                	<h1><span>内心独白</span><span style="background:#e0566d;">自我描述</span></h1>
+                                    <p>
+                                        <em><img src="images/arrowl.png" alt="img" width="8" height="10"></em>
+                                        <span>“对整个世界来说，你是一个人，而对一个人来说，你就是整个世界。我会在这里等着你的到来，期待我们的爱情开花结果” </span>
+                                    </p>
+                                </div>
+                                <div class="preview3">
+                                	<h1><img src="images/data-icon.png">详细资料</h1>
+                                    <p><span>性别：<em>女</em></span><span>体型：<em>--</em></span><span>生肖：<em>鼠</em></span><span>职业：<em>--</em></span><span>身高：<em>169CM</em></span><span>民族：<em>--</em></span><span>星座：<em>狮子座</em></span><span>公司：<em>--</em></span><span>体重：<em>--</em></span><span>信仰：<em>--</em></span><span>血型：<em>--</em></span></p>
+                                </div>
+                                <div class="preview3">
+                                	<h1><img src="images/coffee-icon.png">生活状况</h1>
+                                    <p><span>住房条件：<em>--</em></span><span>是否喝酒：<em>--</em></span><span>想何时结婚：<em>--</em></span><span>较大的消费：<em>--</em></span><span>是否购车：<em>--</em></span><span>厨艺：<em>--</em></span><span>婚后与父母住吗：<em>--</em></span><span>喜欢怎样的约会：<em>--</em></span><span>是否吸烟：<em>--</em></span><span>家务：<em>--</em></span><span>与对方父母同住：<em>--</em></span></p>
+                                </div>
+                                <div class="preview3">
+                                	<h1><img src="images/hobby-icon.png">兴趣爱好</h1>
+                                    <p><span>喜欢的活动：<em>--</em></span><span>喜欢的影视节目：<em>--</em></span><span>喜欢的宠物：<em>--</em></span><span><em></em></span><span>喜欢的体育运动：<em>--</em></span><span>喜欢的食物：<em>--</em></span><span><em></em></span><span><em></em></span><span>喜欢的音乐：<em>--</em></span><span>喜欢的地方：<em>--</em></span><span><em></em></span></p>
+                                </div>
+                                <div class="preview3" style="height:155px;">
+                                	<h1 style="height:155px;"><img src="images/choose-icon.png">择偶条件</h1>
+                                    <p><span>性别：<em>男</em></span><span>学历：<em>不限</em></span><span>体型：<em>不限</em></span><span>是否喝酒：<em>不限</em></span><span>年龄：<em>31-41岁</em></span><span>月收入：<em>8000元以上</em></span><span>职业：<em>不限</em></span><span>有没有孩子：<em>不限</em></span><span>身高：<em>不限</em></span><span>婚况：<em>未婚</em></span><span>是否抽烟：<em>不限</em></span><span>是否想要孩子：<em>不限</em></span><span>是否有照片：<em>不限</em></span></p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer starts -->
+    <footer>
+    </footer>
+    <!-- footer ends -->
+</div>
+<!-- wrapper ends -->
+
+</body>
+</html>

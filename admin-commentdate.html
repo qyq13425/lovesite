@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<title>Responsive HTML5</title>
+
+<!-- SET: FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+<!-- END: FAVICON -->
+
+<!-- SET: STYLESHEET -->
+<link href="css/style.css?v=1.1" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/dd.css">
+<link rel="stylesheet" type="text/css" href="css/font.css">
+<!-- END: STYLESHEET -->
+
+<!-- SET: SCRIPTS -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.dd.js"></script>
+<script type="text/javascript" src="js/tytabs.jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("select").msDropdown();
+		 $('.menu-icon').click(function(e) {
+           $('nav ul').slideToggle(); 
+        });
+		$('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $(this).parent().toggleClass('checked');
+            }
+            else if($(this).prop("checked") == false){
+                $(this).parent().removeClass('checked');
+            }
+        });
+		
+		$('.bar-percentage[data-percentage]').each(function () {
+	  var progress = $(this);
+	  var percentage = Math.ceil($(this).attr('data-percentage'));
+	  $({countNum: 0}).animate({countNum: percentage}, {
+		duration: 2000,
+		easing:'linear',
+		step: function() {
+		  // What todo on every count
+		  var pct = Math.floor(this.countNum) ;
+		  progress.text(pct) && progress.parent().siblings().children().css('width',pct+'%');
+		}
+	  });
+	});
+		
+   });
+</script>
+<!-- END: SCRIPTS -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js">
+</script>
+<![endif]-->
+</head>
+
+<body>
+
+<!-- wrapper starts -->
+<div class="wrapper">
+    <!-- Header Starts -->
+    <header>
+    	<div class="container">
+        	<div class="header-in">
+            	<div class="logo logo1"><a href="#"><img src="images/logo.png" alt="img"></a></div>
+                <a class="menu-icon"><img src="images/menu-cion.png" alt="img" width="30" height="30"></a>
+                <nav>
+                	<ul class="nav1">
+                        <li><a href="#">交友</a></li>
+                        <li><a href="#">婚恋</a></li>
+                        <li class="active"><a href="#">个人中心</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </nav>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <!-- Header ends -->
+    
+    
+    <div class="feature-nav">
+    	<div class="container">	
+        	<div class="nav-in nav-in1">
+            	<ul>
+                	<li><a href="#">消息</a></li>
+                    <li><a href="#">站内信</a></li>
+                    <li><a href="#">通知</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!-- maincontent Starts -->
+    
+    <!-- maincontent ends -->
+    <div class="admin-section">
+    	<div class="container">
+        	<div class="admin-in">
+            	<div class="admin-nav">	
+                	<ul>
+                    	<li><a href="#">首页</a></li>
+                        <li class="no_bg"><a href="#">个人中心</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="admin-content">
+                	<div class="admin-left">
+                    	<em><img src="images/girl-img.png" alt="img" width="170" height="170"></em>
+                        <strong>vivian</strong>
+                        <span><a href="#">更换头像</a></span>
+                        <ul>
+                        	<li><a href="#">个人资料</a></li>
+                            <li><a href="#">我的相册</a></li>
+                            <li><a href="#">我的关注</a></li>
+                            <li class="active"><a href="#">我的评论</a></li>
+                            <li><a href="#">我的约会</a></li>
+                            <li><a href="#">我的恋爱</a></li>
+                            <li><a href="#">我的小伙伴</a></li>
+                            <li><a href="#">我的树洞</a></li>
+                            <li class="no_border"><a href="#">我的爱秀</a></li>
+                        </ul>
+                    </div>
+                    <div class="admin-right" id="tabsholder">
+                        <div class="tab-content tabscontent" id="content1" style="padding:26px 52px 0 52px;">
+                        <!--此处有改动 新增check框 两个选项卡删除 第二个选项卡内容不要了-->
+                        	<div class="check-block" style="padding:0;display:inline-block;line-height:28px;">
+                                <label style="width:100%;" class="checked">
+                                    <input type="checkbox">全部评论
+                                </label>
+                            </div>
+                            <div class="check-block" style="padding:0;display:inline-block;line-height:28px;margin-left:20px;">
+                                <label style="width:100%;">
+                                    <input type="checkbox">约会评论
+                                </label>
+                            </div>
+                            <div class="check-block" style="padding:0;display:inline-block;line-height:28px;margin-left:20px;">
+                                <label style="width:100%;">
+                                    <input type="checkbox">恋爱评论
+                                </label>
+                            </div>
+                            <div class="check-block" style="padding:0;display:inline-block;line-height:28px;margin-left:20px;">
+                                <label style="width:100%;">
+                                    <input type="checkbox">树洞评论
+                                </label>
+                            </div>
+                            <div class="check-block" style="padding:0;display:inline-block;line-height:28px;margin-left:20px;">
+                                <label style="width:100%;">
+                                    <input type="checkbox">爱秀评论
+                                </label>
+                            </div>
+                            <div class="check-block" style="padding:0;display:inline-block;line-height:28px; margin-left:20px;">
+                                <label style="width:100%;">
+                                    <input type="checkbox">脱单评论
+                                </label>
+                            </div>
+                        	<div class="search-block">
+                            	<input type="text" value="查找评论内容或评论人" onclick="if(this.value=='查找评论内容或评论人'){this.value=''}" onblur="if(this.value==''){this.value='查找评论内容或评论人'}">
+                                <a class="search-ico" href="#"></a>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="engage-block">
+                            	<ul>
+                                	<li>
+                                    	<img src="images/girl-imgx.png">
+                                        <div class="right">
+                                        	<h1>Vivian</h1>
+                                            <h2><span>对约会<a href="#" class="a-change">甜水面君</a>的评论</span><a href="#" class="button">查看详情</a></h2>
+                                            <h3 class="clear"></h3>
+                                            <p>
+                                            	<span><b>评论甜水面君的约会：</b>我元旦休假，想约一个同样有空的妹子去滑雪，具体时间可以商议，1月1日-3日都有空。我愿意提供往返交通费用。</span>
+                                                <em><img src="images/arrow.png" alt="img" width="8" height="10"></em>
+                                            </p>
+                                            <small>2015-12-11&nbsp;&nbsp;&nbsp;18:06</small>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<img src="images/girl-imgx.png">
+                                        <div class="right">
+                                        	<h1>Vivian</h1>
+                                            <h2><span>对约会<a href="#" class="a-change">甜水面君</a>的评论</span><a href="#" class="button">查看详情</a></h2>
+                                            <h3 class="clear"></h3>
+                                            <p>
+                                            	<span><b>评论甜水面君的约会：</b>我元旦休假，想约一个同样有空的妹子去滑雪，具体时间可以商议，1月1日-3日都有空。我愿意提供往返交通费用。</span>
+                                                <em><img src="images/arrow.png" alt="img" width="8" height="10"></em>
+                                            </p>
+                                            <small>2015-12-11&nbsp;&nbsp;&nbsp;18:06</small>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<img src="images/girl-imgx.png">
+                                        <div class="right">
+                                        	<h1>Vivian</h1>
+                                            <h2><span>对约会<a href="#" class="a-change">甜水面君</a>的评论</span><a href="#" class="button">查看详情</a></h2>
+                                            <h3 class="clear"></h3>
+                                            <p>
+                                            	<span><b>评论甜水面君的约会：</b>我元旦休假，想约一个同样有空的妹子去滑雪，具体时间可以商议，1月1日-3日都有空。我愿意提供往返交通费用。</span>
+                                                <em><img src="images/arrow.png" alt="img" width="8" height="10"></em>
+                                            </p>
+                                            <small>2015-12-11&nbsp;&nbsp;&nbsp;18:06</small>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<img src="images/girl-imgx.png">
+                                        <div class="right">
+                                        	<h1>Vivian</h1>
+                                            <h2><span>对约会<a href="#" class="a-change">甜水面君</a>的评论</span><a href="#" class="button">查看详情</a></h2>
+                                            <h3 class="clear"></h3>
+                                            <p>
+                                            	<span><b>评论甜水面君的约会：</b>我元旦休假，想约一个同样有空的妹子去滑雪，具体时间可以商议，1月1日-3日都有空。我愿意提供往返交通费用。</span>
+                                                <em><img src="images/arrow.png" alt="img" width="8" height="10"></em>
+                                            </p>
+                                            <small>2015-12-11&nbsp;&nbsp;&nbsp;18:06</small>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<img src="images/girl-imgx.png">
+                                        <div class="right">
+                                        	<h1>Vivian</h1>
+                                            <h2><span>对约会<a href="#" class="a-change">甜水面君</a>的评论</span><a href="#" class="button">查看详情</a></h2>
+                                            <h3 class="clear"></h3>
+                                            <p>
+                                            	<span><b>评论甜水面君的约会：</b>我元旦休假，想约一个同样有空的妹子去滑雪，具体时间可以商议，1月1日-3日都有空。我愿意提供往返交通费用。</span>
+                                                <em><img src="images/arrow.png" alt="img" width="8" height="10"></em>
+                                            </p>
+                                            <small>2015-12-11&nbsp;&nbsp;&nbsp;18:06</small>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<img src="images/girl-imgx.png">
+                                        <div class="right">
+                                        	<h1>Vivian</h1>
+                                            <h2><span>对约会<a href="#" class="a-change">甜水面君</a>的评论</span><a href="#" class="button">查看详情</a></h2>
+                                            <h3 class="clear"></h3>
+                                            <p>
+                                            	<span><b>评论甜水面君的约会：</b>我元旦休假，想约一个同样有空的妹子去滑雪，具体时间可以商议，1月1日-3日都有空。我愿意提供往返交通费用。</span>
+                                                <em><img src="images/arrow.png" alt="img" width="8" height="10"></em>
+                                            </p>
+                                            <small>2015-12-11&nbsp;&nbsp;&nbsp;18:06</small>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--分页栏去掉最后一栏-->
+                            <div class="fanye-block">
+                                <ul>
+                                    <li><a href="#" class="active" style="width:54px;">首页</a></li>
+                                    <li><a href="#" class="active">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#" class="active" style="width:54px;">尾页</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer starts -->
+    <footer>
+    </footer>
+    <!-- footer ends -->
+</div>
+<!-- wrapper ends -->
+
+</body>
+</html>

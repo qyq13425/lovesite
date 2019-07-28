@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<title>Responsive HTML5</title>
+<link href="css/style.css?v=1.1" rel="stylesheet" type="text/css" media="all">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $(this).parent().toggleClass('checked');
+            }
+            else if($(this).prop("checked") == false){
+                $(this).parent().removeClass('checked');
+            }
+        });
+    });
+</script>
+</head>
+
+<body>
+<div class="alert-block">
+	<div class="title">
+    	<span>提示信息</span>
+        <img src="images/wrong1.png">
+    </div>
+    <form>
+    <div class="content1">
+    	<img src="images/alert-icon.png">
+        <div class="text">
+        	<h1>不能进行到下一步哦！请填写以下选项：</h1>
+            <p>至少选取一个标签；<br>至少上传一张图片；<br>选择约会日期；<br>填写约会地点；<br>填写联系方式；</p>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="content2">2秒后窗口关闭</div>
+    </form>
+</div>
+</body>
+</html>

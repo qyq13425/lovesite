@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<title>Responsive HTML5</title>
+<link href="css/style.css?v=1.1" rel="stylesheet" type="text/css" media="all">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $(this).parent().toggleClass('checked');
+            }
+            else if($(this).prop("checked") == false){
+                $(this).parent().removeClass('checked');
+            }
+        });
+    });
+</script>
+</head>
+
+<body>
+<div class="alter-head">
+	<div class="title">
+    	<span>头像设置</span>
+        <img src="images/wrong.png">
+    </div>
+    <div class="alter-ok">
+    	<img src="images/hook-icon.png" width="25" height="21">
+        <div class="right">
+        	<h2>您的头像已修改成功！</h2>
+            <a href="#">重新选择头像</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

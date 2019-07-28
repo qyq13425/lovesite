@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<title>Responsive HTML5</title>
+
+<!-- SET: FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+<!-- END: FAVICON -->
+
+<!-- SET: STYLESHEET -->
+<link href="css/style.css?v=1.1" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+<!-- END: STYLESHEET -->
+
+<!-- SET: SCRIPTS -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+        $('.bxslider').bxSlider({
+			auto:true
+	    });
+		$('.menu-icon').click(function(e) {
+           $('nav ul').slideToggle(); 
+        });
+		size_li = $("#myList li").size();
+		x=8;
+		$('#myList li:lt('+x+')').show();
+		$('#loadMore').click(function () {
+			x= (x+4 <= size_li) ? x+4 : size_li;
+			$('#myList li:lt('+x+')').show();
+		});
+		
+    });
+</script>
+</head>
+
+<body>
+<header>
+    <div class="container">
+        <div class="header-in">
+            <div class="logo logo1"><a href="#"><img src="images/logo.png" alt="img"></a></div>
+            <a class="menu-icon"><img src="images/menu-cion.png" alt="img" width="30" height="30"></a>
+            <nav>
+                <ul class="nav1">
+                    <li><a href="#">交友</a></li>
+                    <li><a href="#">婚恋</a></li>
+                    <li class="active"><a href="#">个人中心</a></li>
+                </ul>
+                <div class="clear"></div>
+            </nav>
+            <div class="clear"></div>
+        </div>
+    </div>
+</header>
+<div class="feature-nav">
+    <div class="container">	
+        <div class="nav-in nav-in1">
+            <ul>
+                <li><a href="#">消息</a></li>
+                <li><a href="#">站内信</a></li>
+                <li><a href="#">通知</a></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="container2" style="position:relative;">
+    <ul id="location" class="container">
+        <li class="zi"><a href="#">首页</a></li>
+        <li><img src="images/location.png" /></li>
+        <li class="zi"><a href="#">求约会</a></li>
+        <li><img src="images/location.png" /></li>
+        <li class="zi"><a href="#">约会详情</a></li>
+    </ul>
+    <div class="yhxq_ct container">
+    	<div class="yhxq_l">
+        	<div class="left1">
+                <ul>
+                    <li class="li1">
+                    	<h1>发起人</h1>
+                        <div><img src="images/yhxq_tx1.png"/><p>vivian</p><a class="a1" href="#" target="_parent" name="a1" onclick="cli()" title="赞">19</a><a class="a2" href="#"></a></div>
+                    </li>
+                    <li class="li2">
+                        <div class="li_l"><h1>约会卡片 0123456</h1><p>标签：<span>美食</span><span>休闲娱乐</span></p></div>
+                        <div class="li_r"><p>约会状态：<span>应答中</span></p><p>应答人数：<span>11</span></p><p>关注人数：<span>19</span></p></div>
+                    </li>
+                    <li class="li3">
+                        <input type="button" value="关注此卡片" onclick="gz();" name="button1" style="background:#2593e7" />
+                        <input type="button" value="我要应答" style="background:#e0566d" />
+                    </li>
+                </ul>
+                <script>
+                	var a1=document.getElementsByName("a1");
+					var button1=document.getElementsByName("button1");
+					function cli(){
+						a1[0].style.backgroundImage="url(images/yhxq_zbjv.png)";
+					}
+					function gz(){
+						button1[0].value="已关注";
+					}
+                </script>
+                <!--此处新增一行ta希望填写-->
+                <div class="xq1">
+                	<p class="p1">时间： <em>2016.01.08</em><span>还有3天应答截止</span></p>
+                    <p class="p2">地点： <span>百盛购物中心五层回转寿司</span></p>
+                    <p class="p3"><em>TA说：</em><span>“振兴街那边新开了一家日式料理，朋友去过说很正宗，近期想约一位吃货一起去品尝，我请客哈！时间商议。” </span></p>
+                    <p class="p4"><em>TA的期望：</em><span>男&nbsp;&nbsp;&nbsp;&nbsp;20-28岁&nbsp;&nbsp;&nbsp;&nbsp;身高170-185厘米<br />五官端正，有礼貌<br />第一次约会AA制</span></p>
+                    <p class="p5"><em>TA不能接受：</em><span>处女座&nbsp;&nbsp;&nbsp;养宠物&nbsp;&nbsp;&nbsp;酗酒</span></p>
+                    <p class="p10"><em>TA希望对方填写：</em><span>兴趣爱好&nbsp;&nbsp;&nbsp;饮食偏好&nbsp;&nbsp;&nbsp;工作情况</span></p>
+                    <p class="p6"><em>TA附上的图片：</em><img src="images/yhxq_tx2.jpg" /><img src="images/yhxq_tx3.jpg" /></p>
+                    <p class="p7">TA要求上传照片</p>
+                    <p class="p8">TA要求留下联系方式</p>
+                    <!--按钮名字改动 并且改成了两个-->
+                    <a href="#" class="a1">我要附言</a>
+                    <a href="#" class="a2">取消约会</a>
+                </div>
+            </div>
+            <div class="left2">
+            	<div class="title">应答者</div>
+                <div class="xq2">
+                	<ul>
+                    	<li><img src="images/yhxq_tx4.png" /><h1>小白铲屎官</h1><p><span></span>被<em>19408</em>人关注</p><a id="yinda_btn">查看应答</a></li>
+                        <li><img src="images/yhxq_tx4.png" /><h1>小白铲屎官</h1><p><span></span>被<em>19408</em>人关注</p><a href="#">查看应答</a></li>
+                        <li><img src="images/yhxq_tx4.png" /><h1>小白铲屎官</h1><p><span></span>被<em>19408</em>人关注</p><a href="#">查看应答</a></li>
+                        <li style="margin-right:0"><img src="images/yhxq_tx4.png" /><h1>小白铲屎官</h1><p><span></span>被<em>19408</em>人关注</p><a href="#">查看应答</a></li>
+                    </ul>
+                    <ul>
+                    	<li><img src="images/yhxq_tx4.png" /><h1>小白铲屎官</h1><p><span></span>被<em>19408</em>人关注</p><a href="#">查看应答</a></li>
+                        <li><img src="images/yhxq_tx4.png" /><h1>小白铲屎官</h1><p><span></span>被<em>19408</em>人关注</p><a href="#">查看应答</a></li>
+                        <li><img src="images/yhxq_tx4.png" /><h1>小白铲屎官</h1><p><span></span>被<em>19408</em>人关注</p><a href="#">查看应答</a></li>
+                        <li style="margin-right:0"><img src="images/yhxq_tx4.png" /><h1>小白铲屎官</h1><p><span></span>被<em>19408</em>人关注</p><a href="#">查看应答</a></li>
+                    </ul>
+                    <div class="yinda-block" id="yinda">
+                    	<div class="left">
+                        	<img src="images/girl-img.png">
+                            <a href="#">关注他</a>
+                            <a href="#">进入他的主页</a>
+                            <a href="#">选中他约会</a>
+                        </div>
+                        <div class="right">
+                        	<div class="right1">
+                            	<h1><a href="#" style="background:#2593e7">昵称</a><a href="#" style="background:#e0566d">联系方式</a></h1>
+                                <p><span>vivian</span><br>13835206689</p>
+                                <img src="images/wrong.png" class="close_btn">
+                            </div>
+                        	<div class="right2">
+                            	<img src="images/yhxq_tx2.jpg" /><img src="images/yhxq_tx3.jpg" />
+                            </div>
+                            <!--文本域不可编辑-->
+                        	<div class="right3">
+                            	<textarea disabled>很多人愿意伪装自己是「文艺青年」，至少说明「文艺」这件事情，在他们看来是高级的、向善的，是有价值的，是值得花费精力的，哪怕初衷是一点点的虚荣。这样说好了，他们在丽江或者稻城发自拍，畅谈自己对米兰·昆德拉或者村上春树的认知，发表自己对于《肖申克救赎》和《牯岭街少年杀人事件》看法的同时，他们至少先要走出去旅行，花点时间去吸收这些作品，再不济，至少也要通过搜索工具把一些名词解释熟读一遍吧。这种心向美好的态度，不是很纯粹可爱么。每一个五千观影量，万张专辑杀手或者日读一书的真·文艺青年，够丰富，欠缺些时间累积罢了。
+</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                $(function ($) {
+					//弹出登录
+					$("#yinda_btn").hover(function () {
+						$(this).stop().animate({
+							opacity: '1'
+						}, 600);
+					}, function () {
+						$(this).stop().animate({
+							opacity: '0.6'
+						}, 1000);
+					}).on('click', function () {
+						$("body").append("<div id='mask'></div>");
+						$("#mask").addClass("mask").fadeIn("slow");
+						$("#yinda").fadeIn("slow");
+					});
+					//关闭
+					$(".close_btn").hover(function () { $(this).css({ color: 'black' }) }, function () { $(this).css({ color: '#999' }) }).on('click', function () {
+						$("#yinda").fadeOut("fast");
+						$("#mask").css({ display: 'none' });
+					});
+				});
+                </script>
+                <!--分页栏改动-->
+                <div class="fanye" style="margin-bottom:100px;">
+                    <ul>
+                        <li><a href="#" class="active" style="width:54px;">首页</a></li>
+                        <li><a href="#" class="active">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#" class="active" style="width:54px;">尾页</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="left3">
+            	<div class="title">评论</div>
+                <div class="xq3">
+                	<ul>
+                    	<li><img src="images/icon1.png" /><h1 style="color:#2593e7;">化学好</h1><p>“我元旦休假，想约一个同样有空的妹子去滑雪，具体时间可以商议，1月1日-3日都有空。我愿意提供往返交通费用。”</p></li>
+                        <li><img src="images/a3-icon.png" /><h1 style="color:#e0566d;">小童</h1><p>“我喜欢小动物，想与一位有爱心的男生约会，时间本周末。我们去流浪动物收容所看望猫咪，然后去吃饭，:)”</p></li>
+                        <li><img src="images/icon3.png" /><h1 style="color:#2593e7;">甜水面君</h1><p>“振兴街那边新开了一家日式料理，朋友去过说很正宗，近期想约一位吃货妹子一起去品尝，我请客哈！时间商议。”</p></li>
+                        <li><img src="images/a1-icon.png" /><h1 style="color:#e0566d;">vivian</h1><p>“下月初去滑冰啊！约个滑冰技术好的男生一起去！要教我哦！”</p></li>
+                    </ul>
+                    <div class="review">
+                    	<h1>我也说一句（短评论，字数50以内）<span>还可以输入<b id="zis">50</b>个字</span></h1>
+                        <textarea name="message" onkeydown="textCounter();" onkeyup="textCounter()"></textarea>
+                        <a href="#">发布</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--右侧模块整体改动-->
+        <section class="card_right" style="margin-top:22px;">
+            <h2>应约规则</h2>	
+            <div class="card_list">
+                <section class="appoint">
+                    <h3>应答约会时，你需要填写三个步骤：</h3>
+                    <ul>
+                        <li><a href="#">1：同意我们的协议；</a></li>
+                        <li><a href="#">2：填写个人信息；</a></li>
+                        <li><a href="#">3：提交应答卡片；</a></li>
+                    </ul>	
+                </section>
+                <section class="appoint">
+                    <h3>当你的应答卡片提交后，你可以：</h3>
+                    <ul>
+                        <li><a href="#">1：在<span>个人中心</span>查看“我应答的约会” ;</a></li>
+                        <li><a href="#">2：在约会卡片详情页留言给发起人；</a></li>
+                    </ul>	
+                </section>
+                <div class="appoint_cnt">
+                    <h3>可能出现的结果：</h3>
+                    <p>1：若发起人选择你为约会对象，系统将通过消息将发起人的联系方式</p>
+                    <p>2：若发起人未选择你为约会对象，你仍可以在约会卡片详情页进行留言；</p>
+                    <p>3：若发起人取消约会，该卡片将被锁定，无法进行应答与留言；</p>
+                    <p>4：若发起人未能在截止日期前选择约会对象，该卡片将被锁定，无法进行应答与留言；</p>
+                </div>
+                <div class="appoint_cnt">
+                    <p>你可以在应答约会的选项中<a href="#">选择匿名应约</a>，这样其他人就看不到你的应约卡片了；</p>	
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<script>
+	var field = document.getElementsByName("message");
+	var zis = document.getElementById("zis");
+	var maxlimit = 50; 
+function textCounter() {
+	if (field[0].value.length > maxlimit)
+		field[0].value = field[0].value.substring(0, maxlimit);
+   	else
+       zis.innerText = maxlimit - field[0].value.length;
+}
+</script>
+<footer>
+</footer>
+</body>
+</html>

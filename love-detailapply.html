@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<title>Responsive HTML5</title>
+
+<!-- SET: FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+<!-- END: FAVICON -->
+
+<!-- SET: STYLESHEET -->
+<link href="css/style.css?v=1.1" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+<!-- END: STYLESHEET -->
+
+<!-- SET: SCRIPTS -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+        $('.bxslider').bxSlider({
+			auto:true
+	    });
+		$('.menu-icon').click(function(e) {
+           $('nav ul').slideToggle(); 
+        });
+		size_li = $("#myList li").size();
+		x=8;
+		$('#myList li:lt('+x+')').show();
+		$('#loadMore').click(function () {
+			x= (x+4 <= size_li) ? x+4 : size_li;
+			$('#myList li:lt('+x+')').show();
+		});
+		
+    });
+</script>
+</head>
+<!--该页面上面三个文本框都禁止输入 显示不可修改的文字-->
+<body style="background:#f7f7f7;">
+
+<!-- wrapper starts -->
+<div class="wrapper">
+    <!-- Header Starts -->
+    <header>
+    	<div class="container">
+        	<div class="header-in">
+            	<div class="logo"><a href="#"><img src="images/logo.png" alt="img"></a></div>
+                <a class="menu-icon"><img src="images/menu-cion.png" alt="img" width="30" height="30"></a>
+                <nav>
+                	<ul>
+                    	<li class="active"><a href="#">交友</a></li>
+                        <li><a href="#">婚恋</a></li>
+                        <li><a href="#">活动</a></li>
+                        <li><a href="#">登录/注册</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </nav>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <!-- Header ends -->
+    <div class="slider">
+    	<ul class="bxslider">
+        	<li><img src="images/slider.jpg" alt="img" width="1920" height="519"></li>
+            <li><img src="images/slider.jpg" alt="img" width="1920" height="519"></li>
+            <li><img src="images/slider.jpg" alt="img" width="1920" height="519"></li>
+        </ul>
+    </div>
+    <div class="feature-nav">
+    	<div class="container">	
+        	<div class="nav-in">
+            	<ul>
+                	<li><a href="#">约会</a></li>
+                    <li><a href="#">恋爱</a></li>
+                    <li><a href="#">小伙伴</a></li>
+                    <li><a href="#" class="love_h_c">爱秀</a></li>
+                    <li><a href="#">脱单宝典</a></li>
+                    <li class="last"><a href="#">树洞</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!-- maincontent Starts -->
+    <div class="maincontent">
+    	<div class="container">
+        	<div class="main-in">
+                <div class="admin-nav">	
+                	<ul>
+                    	<li><a href="#">首页</a></li>
+                        <li><a href="#">爱秀</a></li>
+                        <li class="no_bg"><a href="#">恋爱详情页</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="loved-block">
+                    <div class="content01 flt_lt">
+                        <img class="love_img"  src="images/pic2.jpg"/>
+                        <div class="de_boder">
+                            <h1>vivian</h1>
+                            <p>25岁<br>狮子座</p>
+                            <div class="love_cont">
+                                <p class="flt_lt">喜欢：</p>
+                                <div class="love_bf_nr">
+                                  <a>宠物</a><a>植物</a><a>美食</a><a>旅游</a><a>手工</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="love1_btn">
+                        <!--此处按钮变成可点击 href=#-->
+                            <a class="de_btn_c_01" href="#">关注TA</a>
+                            <a class="de_btn_c_02" href="#">进入TA的主页</a>
+                            <a class="de_btn_c_01" href="#">关注这张卡片</a>    
+                        </div>
+                    </div>
+                    <div class="love-right flt_lt">
+                        <div class="content02">
+                            <div class="right1">
+                                <h1>关于TA</h1>
+                            </div>
+                            <div class="right2">
+                                <ul>
+                                    <li class="li1">TA的信息</li>
+                                    <li class="li2">
+                                        <p>女&nbsp;&nbsp;&nbsp;&nbsp;身高170厘米&nbsp;&nbsp;&nbsp;&nbsp;体重50kg&nbsp;&nbsp;&nbsp;&nbsp;<br>25岁&nbsp;&nbsp;&nbsp;&nbsp;狮子座&nbsp;&nbsp;&nbsp;&nbsp;A型血&nbsp;&nbsp;&nbsp;&nbsp;<br>律师&nbsp;&nbsp;&nbsp;&nbsp;月薪3000以上&nbsp;&nbsp;&nbsp;&nbsp;研究生</p>
+                                        <h3>兴趣爱好：</h3>
+                                        <span>美食</span>
+                                        <span>运动</span>
+                                        <span>阅读</span>
+                                        <p>不抽烟 不饮酒</p>
+                                    </li>
+                                    <li class="li3">
+                                    	<div class="scrollimg">
+                                            <ul class="scroll1">
+                                                <li><img src="images/l3.png" class="bigimg" /></li>
+                                                <li><img src="images/l2.png" class="bigimg" /></li>
+                                                <li><img src="images/l1.png" class="bigimg" /></li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <p class="jian_left1">
+                                            <img src="images/arrow3.png" />
+                                        </p>
+                                        <p class="jian_right1">
+                                            <img src="images/arrow4.png" />
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="right3">
+                                <section class="txt-content" style="margin-top:40px;">
+                                    <h6>用几句话简单的介绍一下自己，让对方更加了解你<span>比如平时喜欢去什么地方，喜欢的恋爱方式有哪些等等</span></h6>
+                                    <div class="clear"></div>
+                                    <div class="txt-con">
+                                        <textarea  name="fmsg" id="fmsg" class="textarea" onblur="if(this.value==''){this.value=''}" onfocus="if(this.value==''){this.value=''}" rows="5" cols="5" style="background:#fff;" disabled>很多人愿意伪装自己是「文艺青年」，至少说明「文艺」这件事情，在他们看来是高级的、向善的，是有价值的，是值得花费精力的，哪怕初衷是一点点的虚荣。这样说好了，他们在丽江或者稻城发自拍，畅谈自己对米兰·昆德拉或者村上春树的认知，发表自己对于《肖申克救赎》和《牯岭街少年杀人事件》看法的同时，他们至少先要走出去旅行，花点时间去吸收这些作品，再不济，至少也要通过搜索工具把一些名词解释熟读一遍吧。这种心向美好的态度，不是很纯粹可爱么。每一个五千观影量，万张专辑杀手或者日读一书的真·文艺青年，最初也会有分不清基耶洛夫斯基和塔科夫斯基的时候，也有认为韩寒或者余秋雨是超牛逼作家的时候，也有听完披头士或者宋冬野的唱片就忍不住向朋友圈嘚瑟一下的时候。万事总得有个开始嘛。所以大可不必反感「文艺青年」们。你可能并不清楚，对于世上很大部分的人而言，他们容易囿于生计和琐事，可能无法像很多「你们」一样，花费足够多的时间去接收和欣赏高级的文化产品。获取这些优质内容的对价和渠道，可能都是他们在幼年或者青少年时期的生活环境难以负担的。更何况，其中有更多的朋友，之所以显得审美不太靠谱，只是因为太过年轻，获取的知识量不够丰富，欠缺些时间累积罢了。</textarea>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="content03">
+                        	<div class="right1">
+                                <h1>TA的要求</h1>
+                            </div>
+                            <div class="right2">
+                                <ul>
+                                    <li class="li1">TA的信息</li>
+                                    <li class="li2">
+                                        <p>男&nbsp;&nbsp;&nbsp;&nbsp;身高175厘米以上&nbsp;&nbsp;&nbsp;&nbsp;体重50kg以上&nbsp;&nbsp;&nbsp;&nbsp;<br>26-30岁&nbsp;&nbsp;&nbsp;&nbsp;摩羯座&nbsp;&nbsp;&nbsp;&nbsp;B型血&nbsp;&nbsp;&nbsp;&nbsp;<br>有固定工作&nbsp;&nbsp;&nbsp;&nbsp;月薪4000以上&nbsp;&nbsp;&nbsp;&nbsp;本科&nbsp;&nbsp;&nbsp;&nbsp;<br>不抽烟&nbsp;&nbsp;&nbsp;&nbsp;不饮酒&nbsp;&nbsp;&nbsp;&nbsp;无不良癖好</p>
+                                        <div class="field-block" style="margin-top:30px;">
+                                            <div class="check-block" style="padding:0px 0px 0px 0px; display:inline-block; float:left; padding-top:10px; line-height:28px;">
+                                                <label style="width:100%;" class="checked">
+                                                    <input type="checkbox">有无联系方式
+                                                </label>
+                                            </div>
+                                            <div class="check-block" style="padding:0px 0px 0px 0px; display:inline-block; float:left; padding-top:10px; line-height:28px; margin-left:20px;">
+                                                <label style="width:100%;">
+                                                    <input type="checkbox">有无相册
+                                                </label>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </li>
+                                    <li class="li3">
+                                        <h3>兴趣爱好：</h3>
+                                        <span>美食</span>
+                                        <span>运动</span>
+                                        <span>阅读</span><br>
+                                        <span>手工</span>
+                                        <span>音乐</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="right3">
+                                <div class="txt-con" style="margin-bottom:40px; margin-left:20px;">
+                                    <small style="padding-bottom:10px; font-size:14px; font-family:微软雅黑; font-weight:bold; color:#2593e7">备注要求</small>
+                                    <textarea  name="fmsg" id="fmsg" class="textarea" onblur="if(this.value==''){this.value=''}" onfocus="if(this.value==''){this.value=''}" rows="5" cols="5" style="min-height:148px; width:96%; margin-top:5px; background:#fff;" disabled>很多人愿意伪装自己是「文艺青年」，至少说明「文艺」这件事情，在他们看来是高级的、向善的，是有价值的，是值得花费精力的，哪怕初衷是一点点的虚荣。这样说好了，他们在丽江或者稻城发自拍，畅谈自己对米兰·昆德拉或者村上春树的认知，发表自己对于《肖申克救赎》和《牯岭街少年杀人事件》看法的同时，他们至少先要走出去旅行，花点时间去吸收这些作品，再不济，至少也要通过搜索工具把一些名词解释熟读一遍吧。这种心向美好的态度，不是很纯粹可爱么。每一个五千观影量，万张专辑杀手或者日读一书的真·文艺青年，最初也会有分不清基耶洛夫斯基和塔科夫斯基的时候，也有认为韩寒或者余秋雨是超牛逼作家的时候，也有听完披头士或者宋冬野的唱片就忍不住向朋友圈嘚瑟一下的时候。万事总得有个开始嘛。所以大可不必反感「文艺青年」们。你可能并不清楚，对于世上很大部分的人而言，他们容易囿于生计和琐事，可能无法像很多「你们」一样，花费足够多的时间去接收和欣赏高级的文化产品。获取这些优质内容的对价和渠道，可能都是他们在幼年或者青少年时期的生活环境难以负担的。更何况，其中有更多的朋友，之所以显得审美不太靠谱，只是因为太过年轻，获取的知识量不够丰富，欠缺些时间累积罢了。</textarea>
+                                </div>
+                                <!--删除他的附言-->
+                                <input type="submit" value="更新卡片" class="next" style="margin-top:60px; display:inline-block; margin-left:35%;">
+                                <input type="submit" value="关闭报名" class="next" style="margin-top:60px; display:inline-block; margin-left:5%;">
+                            </div>
+                        </div>
+                        <div class="content04" style="position:relative;">
+                        	<div class="right1">
+                                <h1>已报名人数：20人</h1>
+                            </div>
+                            <div class="right2">
+                            	<ul>
+                                	<li><h1><img src="images/ydr1.png"></h1><h2><span>小白铲屎官</span><a id="apply_btn">查看报名</a></h2></li>
+                                    <li><h1><img src="images/ydr2.png"></h1><h2><span>小白铲屎官</span><a href="#">查看报名</a></h2></li>
+                                    <li style="border-right:none"><h1><img src="images/ydr3.png"></h1><h2><span>小白铲屎官</span><a href="#">查看报名</a></h2></li>
+                                </ul>
+                            </div>
+                            <div class="right2">
+                            	<ul>
+                                	<li><h1><img src="images/ydr1.png"></h1><h2><span>小白铲屎官</span><a href="#">查看报名</a></h2></li>
+                                    <li><h1><img src="images/ydr2.png"></h1><h2><span>小白铲屎官</span><a href="#">查看报名</a></h2></li>
+                                    <li style="border-right:none"><h1><img src="images/ydr3.png"></h1><h2><span>小白铲屎官</span><a href="#">查看报名</a></h2></li>
+                                </ul>
+                            </div>
+                            <div class="right2">
+                            	<ul>
+                                	<li><h1><img src="images/ydr1.png"></h1><h2><span>小白铲屎官</span><a href="#">查看报名</a></h2></li>
+                                    <li><h1><img src="images/ydr2.png"></h1><h2><span>小白铲屎官</span><a href="#">查看报名</a></h2></li>
+                                    <li style="border-right:none"><h1><img src="images/ydr3.png"></h1><h2><span>小白铲屎官</span><a href="#">查看报名</a></h2></li>
+                                </ul>
+                            </div>
+                            <!--新增翻页 原来的按钮删除 上面的列表新增一行-->
+                            <div class="fanye-block" style=" margin-bottom:100px; margin-top:30px;">
+                                <ul>
+                                    <li><a href="#" class="active" style="width:54px;">首页</a></li>
+                                    <li><a href="#" class="active">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#" class="active" style="width:54px;">尾页</a></li>
+                                </ul>
+                            </div>
+                            <div class="apply-block" id="apply">
+                            	<ul>
+                                    <li class="li1">
+                                    	<img src="images/yhxq_tx1.png">
+                                        <h4>小白铲屎官</h4>
+                                        <a href="#" style="background:#2593e7">关注她</a>
+                                        <a href="#" style="background:#e0566d">进入她的主页</a>
+                                    </li>
+                                    <li class="li2">
+                                        <p>女&nbsp;&nbsp;&nbsp;&nbsp;身高170厘米&nbsp;&nbsp;&nbsp;&nbsp;体重50kg&nbsp;&nbsp;&nbsp;&nbsp;<br>25岁&nbsp;&nbsp;&nbsp;&nbsp;狮子座&nbsp;&nbsp;&nbsp;&nbsp;A型血&nbsp;&nbsp;&nbsp;&nbsp;<br>律师&nbsp;&nbsp;&nbsp;&nbsp;月薪3000以上&nbsp;&nbsp;&nbsp;&nbsp;研究生</p>
+                                        <h3>兴趣爱好：</h3>
+                                        <span>美食</span>
+                                        <span>运动</span>
+                                        <span>阅读</span>
+                                        <p>不抽烟&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不饮酒</p>
+                                        <a>13598849653</a>
+                                        <a>QQ：55658456</a>
+                                    </li>
+                                    <li class="li3">
+                                    	<div class="scrollimg">
+                                            <ul class="scroll1">
+                                                <li><img src="images/l3.png" class="bigimg" /></li>
+                                                <li><img src="images/l2.png" class="bigimg" /></li>
+                                                <li><img src="images/l1.png" class="bigimg" /></li>
+                                            </ul>
+                                        </div>
+                                        <p class="jian_left1">
+                                            <img src="images/arrow3.png" />
+                                        </p>
+                                        <p class="jian_right1">
+                                            <img src="images/arrow4.png" />
+                                        </p>
+                                        <script type="text/javascript">
+										$(function(){
+											var imgobj = new Array();
+											var n=0;
+											var l=0;
+											$(".jian_left1").click(function(){
+												$(".scroll1").animate({left:"+=298"},200,function(){
+														l=$(".scroll1").css("left");
+														if(l=="298px"){
+															$(".scroll1").css("left",-596);
+														}
+													})
+											})
+											$(".jian_right1").click(function(){
+												$(".scroll1").animate({left:"-=298"},200,function(){
+														l=$(".scroll1").css("left");
+														if(l=="-894px"){
+															$(".scroll1").css("left",0);
+														}
+													})
+											})
+										})
+										</script>
+                                    </li>
+                                </ul>
+                                <div class="clear"></div>
+                                <div class="textcontent">
+                                	<p>在这里重新自我介绍一下，只是介绍的角度来说的，走过一段恋爱历程，心里有点恐慌，有点麻木，不想在浪费更多的时间，只想找个可以相扶一生，相互理解相互恩爱的女孩共度一生。 本人的口语表达能力不是很强，或许和小时受伤有关，总之很惊险，喜欢看书，或许是因为自己酷爱销售有关吧，看的书比较杂，所接触的人也比较杂，各个层次的高人都有，对很多行业和有关知识做过相信的阅读和分析。 上天对每一个人都会很公平，这一直是我个人的看法，当他给你一个弱点时也会伴随着一个强项在里边，通过几年对自己的认识，有以下特点，直觉感比一般人较强，就是人们常说的第六感，由于自己语言的口述能力不是太强，却培养了我特有的分析能力，还有亲和力，感性接触能力较强。 所以在这里我想缩小找女朋友的范围，我的目标定在属鼠的女孩身上，怎么说呢，因为随着年龄的增大，越来越相信命运的安排，我这是看属相速配上说得，忌属猪的，虎的，还有蛇。 </p>
+                                </div>
+                                <!--img的style里新增cursor-->
+                                <img src="images/wrong.png" style="position:absolute; right:67px; top:14px; cursor:pointer;" class="close_btn">
+                            </div>
+                            <script type="text/javascript">
+							$(function ($) {
+								//弹出登录
+								$("#apply_btn").hover(function () {
+									$(this).stop().animate({
+										opacity: '1'
+									}, 600);
+								}, function () {
+									$(this).stop().animate({
+										opacity: '0.6'
+									}, 1000);
+								}).on('click', function () {
+									$("body").append("<div id='mask'></div>");
+									$("#mask").addClass("mask").fadeIn("slow");
+									$("#apply").fadeIn("slow");
+								});
+								//关闭
+								$(".close_btn").hover(function () { $(this).css({ color: 'black' }) }, function () { $(this).css({ color: '#999' }) }).on('click', function () {
+									$("#apply").fadeOut("fast");
+									$("#mask").css({ display: 'none' });
+								});
+							});
+							</script>
+                        </div>
+                        <div class="content05">
+                            <div class="title">评论</div>
+                            <div class="discuss2-block">
+                            	<ul>
+                                    <li><img src="images/icon1.png" /><h1 style="color:#2593e7;">化学好</h1><p><em><img src="images/arrowl.png" alt="img" width="8" height="10"></em><span>“我元旦休假，想约一个同样有空的妹子去滑雪，具体时间可以商议，1月1日-3日都有空。我愿意提供往返交通费用。”</span></p></li>
+                                    <li><img src="images/a3-icon.png" /><h1 style="color:#e0566d;">小童</h1><p><em><img src="images/arrowl.png" alt="img" width="8" height="10"></em><span>“我喜欢小动物，想与一位有爱心的男生约会，时间本周末。我们去流浪动物收容所看望猫咪，然后去吃饭，:)”</span></p></li>
+                                    <li><img src="images/icon3.png" /><h1 style="color:#2593e7;">甜水面君</h1><p><em><img src="images/arrowl.png" alt="img" width="8" height="10"></em><span>“振兴街那边新开了一家日式料理，朋友去过说很正宗，近期想约一位吃货妹子一起去品尝，我请客哈！时间商议。”</span></p></li>
+                                    <li><img src="images/a1-icon.png" /><h1 style="color:#e0566d;">vivian</h1><p><em><img src="images/arrowl.png" alt="img" width="8" height="10"></em><span>“下月初去滑冰啊！约个滑冰技术好的男生一起去！要教我哦！”</span></p></li>
+                                </ul>
+                                <div class="review">
+                                    <h1>我也说一句（短评论，字数50以内）<span>还可以输入<b id="zis">50</b>个字</span></h1>
+                                    <textarea name="message" onkeydown="textCounter();" onkeyup="textCounter()"></textarea>
+                                    <a href="#">发布</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+				</div>  
+			</div>
+		</div>
+    </div>
+    <!-- maincontent ends -->
+    
+    <!-- footer starts -->
+    <footer>
+    </footer>
+    <!-- footer ends -->
+</div>
+<!-- wrapper ends -->
+
+</body>
+</html>

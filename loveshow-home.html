@@ -1,0 +1,551 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<title>Responsive HTML5</title>
+
+<!-- SET: FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+<!-- END: FAVICON -->
+
+<!-- SET: STYLESHEET -->
+<link href="css/style.css?v=1.1" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="css/font.css">
+<!-- END: STYLESHEET -->
+
+<!-- SET: SCRIPTS -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+        $('.bxslider').bxSlider({
+			auto:true
+	    });
+		$('.menu-icon').click(function(e) {
+           $('nav ul').slideToggle(); 
+        });
+		size_li = $("#myList li").size();
+		x=8;
+		$('#myList li:lt('+x+')').show();
+		$('#loadMore').click(function () {
+			x= (x+4 <= size_li) ? x+4 : size_li;
+			$('#myList li:lt('+x+')').show();
+		});
+		
+    });
+</script>
+<!-- END: SCRIPTS -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<![endif]-->
+<!-- END: SCRIPTS -->
+<!--[if IE 8]>
+<style type="text/css">
+nav ul li{padding: 28px 42px 26px;}
+ 
+</style>
+<![endif]-->
+</head>
+
+<body style="background:#f7f7f7;">
+
+<!-- wrapper starts -->
+<div class="wrapper">
+    <!-- Header Starts -->
+    <header>
+    	<div class="container">
+        	<div class="header-in">
+            	<div class="logo"><a href="#"><img src="images/logo.png" alt="img"></a></div>
+                <a class="menu-icon"><img src="images/menu-cion.png" alt="img" width="30" height="30"></a>
+                <nav>
+                	<ul>
+                    	<li class="active"><a href="#">交友</a></li>
+                        <li><a href="#">婚恋</a></li>
+                        <li><a href="#">活动</a></li>
+                        <li><a href="#">登录/注册</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </nav>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <!-- Header ends -->
+    <div class="slider">
+    	<ul class="bxslider">
+        	<li><img src="images/slider.jpg" alt="img" width="1920" height="519"></li>
+            <li><img src="images/slider.jpg" alt="img" width="1920" height="519"></li>
+            <li><img src="images/slider.jpg" alt="img" width="1920" height="519"></li>
+        </ul>
+    </div>
+    
+    <div class="feature-nav">
+    	<div class="container">	
+        	<div class="nav-in">
+            	<ul>
+                	<li><a href="#">约会</a></li>
+                    <li><a href="#">恋爱</a></li>
+                    <li><a href="#">小伙伴</a></li>
+                    <li><a href="#" class="love_h_c">爱秀</a></li>
+                    <li><a href="#">脱单宝典</a></li>
+                    <li class="last"><a href="#">树洞</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!-- maincontent Starts -->
+    <div class="maincontent">
+    	<div class="container">
+        	<div class="main-in">
+                <div class="admin-nav">	
+                	<ul>
+                    <!--此处去掉一栏导航-->
+                    	<li><a href="#">首页</a></li>
+                         <li class="no_bg"><a href="#">爱秀</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+				<section class="love-con">
+					<h6 style="margin-bottom:30px;"><a href="#">"爱秀"</a>—— 爱美丽的自己，萌萌哒宠物，亲亲的宝贝，让我们秀一秀吧！</h6>
+                    <ul>
+                    <!--li里的第一张图片都加a标签-->
+                        <li style="display:list-item;">
+                            <div class="pic-block" style="padding:5px;">
+                                <a href="#"><img  width="309" height="214" alt="img" src="images/love_img_01.jpg"></a>
+                                <div class="num num1">
+                                	<span>推荐</span>
+                            	</div>
+                            </div>
+                            <div class="ta-block-in-bg" style="overflow:hidden;">
+                                <img width="51" height="51" alt="img" src="images/a1-icon.png">
+                                <section class="ta-con">
+                                    <h6 style="font-size:14px; font-family:宋体; font-weight:bold;">vivian</h6>
+                                    <span class="love_font">自己做的甜蜜小手工</span>
+                                </section>
+                            </div>
+                            <div class="love_r_x">
+                                <a><img width="24" height="21" src="images/love_icon_01.jpg"/></a>
+                                <span>喜欢</span>
+                            </div>
+                        </li>
+                        <li style="display:list-item;">
+                            <div class="pic-block" style="padding:5px;">
+                                <a href="#"><img  width="309" height="214" alt="img" src="images/love_img_02.jpg"></a>
+                                <div class="num num1">
+                                	<span>推荐</span>
+                                </div>
+                            </div>
+                            <div class="ta-block-in-bg" style="overflow:hidden;">
+                            	<img width="51" height="51" alt="img" src="images/a1-icon.png">
+                                <section class="ta-con">
+                                    <h6 style="font-size:14px; font-family:宋体; font-weight:bold;" >vivian</h6>
+                                    <span class="love_font">自己做的甜蜜小手工</span>
+                                </section>
+                            </div>
+                            <div class="love_r_x">
+                                <a><img width="24" height="21" src="images/love_icon_01.jpg"/></a>
+                                <span>喜欢</span>
+                            </div>
+                        </li>
+                        <li style="display:list-item;">
+                            <div class="pic-block" style="padding:5px;">
+                                <a href="#"><img width="309" height="214" alt="img" src="images/love_img_03.jpg"></a>
+                                <div class="num num1">
+                                	<span>推荐</span>
+                                </div>
+                            </div>
+                            <div class="ta-block-in-bg" style="overflow:hidden;">
+                            <img width="51" height="51" alt="img" src="images/a1-icon.png">
+                                <section class="ta-con">
+                                    <h6 style="font-size:14px; font-family:宋体; font-weight:bold;">vivian</h6>
+                                    <span class="love_font">自己做的甜蜜小手工</span>
+                                </section>
+                            </div>
+                            <div class="love_r_x">
+                                <a><img width="24" height="21" src="images/love_icon_01.jpg"/></a>
+                                <span>喜欢</span>
+                            </div>
+                        </li>
+                        <li class="last" style="display:list-item;">
+                            <div class="pic-block" style="padding:5px;">
+                                <a href="#"><img width="309" height="214" alt="img" src="images/love_img_04.jpg"></a>
+                                <div class="num num1">
+                                	<span>推荐</span>
+                                </div>
+                            </div>
+                            <div class="ta-block-in-bg" style="overflow:hidden;">
+                                <img width="51" height="51" alt="img" src="images/a1-icon.png">
+                                <section class="ta-con">
+                                    <h6 style="font-size:14px; font-family:宋体; font-weight:bold;" >vivian</h6>
+                                    <span class="love_font">自己做的甜蜜小手工</span>
+                                </section>
+                            </div>
+                            <div class="love_r_x">
+                                <a><img width="24" height="21" src="images/love_icon_01.jpg"/></a>
+                                <span>喜欢</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>     
+				</section>
+				<div class="clear"></div>
+                <section class="ta-block" >
+                    <div style="overflow:hidden;">
+                	<a class="app" href="#">按时间排序</a>
+                    <a class="app" href="#">按热度排序</a>
+                    <!--此处我也来秀点击跳到本页文本域-->
+                    <a class="love_btn" href="#content">我也来秀</a>
+                    </div>
+                	<ul>
+                    	<li>
+                        	<div class="pic-block">
+                        		<a href="#"><img src="images/pic2.jpg" alt="img" width="321" height="273"></a>
+                                <div class="num">
+                                	<small>9</small>
+                                </div>
+                            </div>
+                            <div class="ta-block-in">
+                            	<img src="images/a1-icon.png" alt="img" width="51" height="51">
+                                <section class="ta-con">
+                                	<h5>vivian</h5>
+                                    <span>2015.12.31-一起跨年</span>
+                                </section>
+                                <div class="arr-con">
+                                	<a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="pic-block">
+                        		<a href="#"><img src="images/pic3.jpg" alt="img" width="321" height="273"></a>
+                                <div class="num">
+                                	<small>2</small>
+                                </div>
+                            </div>
+                            <div class="ta-block-in">
+                            	<img src="images/a2-icon.png" alt="img" width="51" height="51">
+                                <section class="ta-con">
+                                	<h5>一朵</h5>
+                                    <span>2015.11.29-咖啡</span>
+                                </section>
+                                <div class="arr-con">
+                                	<a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="pic-block">
+                        		<a href="#"><img src="images/pic4.jpg" alt="img" width="321" height="273"></a>
+                                <div class="num">
+                                	<small>3</small>
+                                </div>
+                            </div>
+                            <div class="ta-block-in">
+                            	<img src="images/a3-icon.png" alt="img" width="51" height="51">
+                                <section class="ta-con">
+                                	<h5>娜娜</h5>
+                                    <span>2015.12.5-电影</span>
+                                </section>
+                                <div class="arr-con">
+                                	<a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                        <li class="last">
+                        	<div class="pic-block">
+                        		<a href="#"><img src="images/pic2.jpg" alt="img" width="321" height="273"></a>
+                                <div class="num">
+                                	<small>5</small>
+                                </div>
+                            </div>
+                            <div class="ta-block-in">
+                            	<img src="images/a4-icon.png" alt="img" width="51" height="51">
+                                <section class="ta-con">
+                                	<h5>晓秋</h5>
+                                    <span>2015.12.6-酒吧</span>
+                                </section>
+                                <div class="arr-con">
+                                	<a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="pic-block">
+                        		<a href="#"><img src="images/pic6.jpg" alt="img" width="321" height="273"></a>
+                                <div class="num num1">
+                                	<small>1</small>
+                                </div>
+                            </div>
+                            <div class="ta-block-in ta-block-in1">
+                            	<img src="images/icon3.png" alt="img" width="51" height="51">
+                                <section class="ta-con">
+                                	<h5>甜水面君</h5>
+                                    <span>2015.11.23-一吃！</span>
+                                </section>
+                                <div class="arr-con">
+                                	<a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="pic-block">
+                        		<a href="#"><img src="images/pic7.jpg" alt="img" width="321" height="273"></a>
+                                <div class="num num1">
+                                	<small>3</small>
+                                </div>
+                            </div>
+                            <div class="ta-block-in ta-block-in1">
+                            	<img src="images/a5-icon.png" alt="img" width="51" height="51">
+                                <section class="ta-con">
+                                	<h5>逃生依旧</h5>
+                                    <span>2015.11.28-一玩！</span>
+                                </section>
+                                <div class="arr-con">
+                                	<a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="pic-block">
+                        		<a href="#"><img src="images/pic8.jpg" alt="img" width="321" height="273"></a>
+                                <div class="num num1 numn">
+                                	<small>11</small>
+                                </div>
+                            </div>
+                            <div class="ta-block-in ta-block-in1">
+                            	<img src="images/a6-icon.png" alt="img" width="51" height="51">
+                                <section class="ta-con">
+                                	<h5>阿基米德</h5>
+                                    <span>2015.12.11-一动漫</span>
+                                </section>
+                                <div class="arr-con">
+                                	<a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                        <li class="last">
+                        	<div class="pic-block">
+                        		<a href="#"><img src="images/pic9.jpg" alt="img" width="321" height="273"></a>
+                                <div class="num num1">
+                                	<small>9</small>
+                                </div>
+                            </div>
+                            <div class="ta-block-in ta-block-in1">
+                            	<img src="images/a7-icon.png" alt="img" width="51" height="51">
+                                <section class="ta-con">
+                                	<h5>纯粹</h5>
+                                    <span>2015.11.23-一户外</span>
+                                </section>
+                                <div class="arr-con">
+                                	<a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="pic-block">
+                        		<a href="#"><img src="images/pic2.jpg" alt="img" width="321" height="273"></a>
+                                <div class="num">
+                                	<small>9</small>
+                                </div>
+                            </div>
+                            <div class="ta-block-in">
+                            	<img src="images/a1-icon.png" alt="img" width="51" height="51">
+                                <section class="ta-con">
+                                	<h5>vivian</h5>
+                                    <span>2015.12.31-一起跨年</span>
+                                </section>
+                                <div class="arr-con">
+                                	<a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="pic-block">
+                        		<a href="#"><img src="images/pic3.jpg" alt="img" width="321" height="273"></a>
+                                <div class="num">
+                                	<small>2</small>
+                                </div>
+                            </div>
+                            <div class="ta-block-in">
+                            	<img src="images/a2-icon.png" alt="img" width="51" height="51">
+                                <section class="ta-con">
+                                	<h5>一朵</h5>
+                                    <span>2015.11.29-咖啡</span>
+                                </section>
+                                <div class="arr-con">
+                                	<a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="pic-block">
+                        		<a href="#"><img src="images/pic4.jpg" alt="img" width="321" height="273"></a>
+                                <div class="num">
+                                	<small>3</small>
+                                </div>
+                            </div>
+                            <div class="ta-block-in">
+                            	<img src="images/a3-icon.png" alt="img" width="51" height="51">
+                                <section class="ta-con">
+                                	<h5>娜娜</h5>
+                                    <span>2015.12.5-电影</span>
+                                </section>
+                                <div class="arr-con">
+                                	<a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                        <li class="last">
+                        	<div class="pic-block">
+                        		<a href="#"><img src="images/pic2.jpg" alt="img" width="321" height="273"></a>
+                                <div class="num">
+                                	<small>5</small>
+                                </div>
+                            </div>
+                            <div class="ta-block-in">
+                            	<img src="images/a4-icon.png" alt="img" width="51" height="51">
+                                <section class="ta-con">
+                                	<h5>晓秋</h5>
+                                    <span>2015.12.6-酒吧</span>
+                                </section>
+                                <div class="arr-con">
+                                	<a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="pic-block">
+                        		<a href="#"><img src="images/pic6.jpg" alt="img" width="321" height="273"></a>
+                                <div class="num num1">
+                                	<small>1</small>
+                                </div>
+                            </div>
+                            <div class="ta-block-in ta-block-in1">
+                            	<img src="images/icon3.png" alt="img" width="51" height="51">
+                                <section class="ta-con">
+                                	<h5>甜水面君</h5>
+                                    <span>2015.11.23-一吃！</span>
+                                </section>
+                                <div class="arr-con">
+                                	<a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="pic-block">
+                        		<a href="#"><img src="images/pic7.jpg" alt="img" width="321" height="273"></a>
+                                <div class="num num1">
+                                	<small>3</small>
+                                </div>
+                            </div>
+                            <div class="ta-block-in ta-block-in1">
+                            	<img src="images/a5-icon.png" alt="img" width="51" height="51">
+                                <section class="ta-con">
+                                	<h5>逃生依旧</h5>
+                                    <span>2015.11.28-一玩！</span>
+                                </section>
+                                <div class="arr-con">
+                                	<a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="pic-block">
+                        		<a href="#"><img src="images/pic8.jpg" alt="img" width="321" height="273"></a>
+                                <div class="num num1 numn">
+                                	<small>11</small>
+                                </div>
+                            </div>
+                            <div class="ta-block-in ta-block-in1">
+                            	<img src="images/a6-icon.png" alt="img" width="51" height="51">
+                                <section class="ta-con">
+                                	<h5>阿基米德</h5>
+                                    <span>2015.12.11-一动漫</span>
+                                </section>
+                                <div class="arr-con">
+                                	<a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                        <li class="last">
+                        	<div class="pic-block">
+                        		<a href="#"><img src="images/pic9.jpg" alt="img" width="321" height="273"></a>
+                                <div class="num num1">
+                                	<small>9</small>
+                                </div>
+                            </div>
+                            <div class="ta-block-in ta-block-in1">
+                            	<img src="images/a7-icon.png" alt="img" width="51" height="51">
+                                <section class="ta-con">
+                                	<h5>纯粹</h5>
+                                    <span>2015.11.23-一户外</span>
+                                </section>
+                                <div class="arr-con">
+                                	<a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                    <!--添加查看更多按钮-->
+                	<a class="view" id="loadMore" href="#">查看更多</a>
+                </section>
+                
+				<div class="love_Talk">
+                    <p>我也来秀</p>
+                    <!--textarea新增onclick和onblur效果-->
+                    <div class="love_line txtarea-01">
+                    	<textarea name="content" id="content" class="textarea" onClick="if(this.innerHTML=='说点什么吧~'){this.innerHTML=''}" onblur="if(this.innerHTML==''){this.innerHTML='说点什么吧~'}">说点什么吧~</textarea>
+                        <div class="love_bj">
+                        <!--删除了@和#-->
+                            <ul>
+                                <li>
+                                	<a><img src="images/love1.jpg"/></a>
+                                </li>
+                                <li>
+                                    <a><img src="images/love2.jpg"/></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <a href="#" class="tj">提交</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- maincontent ends -->
+    
+    <!-- footer starts -->
+    <footer>
+    </footer>
+    <!-- footer ends -->
+</div>
+<!-- wrapper ends -->
+
+</body>
+</html>

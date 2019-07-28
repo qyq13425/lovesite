@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<title>Responsive HTML5</title>
+<link href="css/style.css?v=1.1" rel="stylesheet" type="text/css" media="all">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $(this).parent().toggleClass('checked');
+            }
+            else if($(this).prop("checked") == false){
+                $(this).parent().removeClass('checked');
+            }
+        });
+    });
+</script>
+</head>
+
+<body>
+<div class="alter-phone">
+	<div class="title">
+    	<span>修改手机号码</span>
+        <img src="images/wrong1.png">
+    </div>
+    <form>
+    <div class="content1">
+    	<ul>
+        	<li>
+                <p>原手机号：</p>
+                <input type="text" class="text-field1">
+                <div class="clear"></div>
+            </li>
+            <li>
+                <p>新手机号：</p>
+                <input type="text" class="text-field1">
+                <input type="button" value="发送验证码" class="yzm" style="border:none;width:20%; background:#e0566d; height:30px;padding:4px 10px 6px 2px; font-size:14px; font-family:微软雅黑; color:#fff; cursor:pointer; margin-left:5px;">
+                <div class="clear"></div>
+            </li>
+        	<li>
+                <p>验证码：</p>
+                <input type="text" class="text-field1">
+                <div class="clear"></div>
+            </li>
+            <li>
+                <p>账号密码：</p>
+                <input type="text" class="text-field1">
+                <div class="clear"></div>
+            </li>
+            <li>
+                <a href="#" class="ok">确定</a>
+            </li>
+        </ul>
+    </div>
+    </form>
+</div>
+</body>
+</html>

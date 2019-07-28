@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<title>Responsive HTML5</title>
+
+<!-- SET: FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+<!-- END: FAVICON -->
+
+<!-- SET: STYLESHEET -->
+<link href="css/style.css?v=1.1" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/dd.css">
+<link rel="stylesheet" type="text/css" href="css/font.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.dd.js"></script>
+<script type="text/javascript" src="js/tytabs.jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("select").msDropdown();
+		 $('.menu-icon').click(function(e) {
+           $('nav ul').slideToggle(); 
+        });
+		$("#tabsholder").tytabs({
+			tabinit:"1",
+			fadespeed:"fast"
+		});
+   });
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $(this).parent().toggleClass('checked');
+                $(this).parent().parent().siblings().children().removeClass('checked');
+            }
+            else if($(this).prop("checked") == false){
+                $(this).parent().removeClass('checked');
+            }
+        });
+    });
+</script>
+</head>
+
+<body>
+
+<!-- wrapper starts -->
+<div class="wrapper" style="background:#f2f2f2;">
+	<header>
+    	<div class="container">
+        	<div class="header-in">
+            	<div class="login-top">
+                	<form name="login_top" action="">
+                    	<p><span><img style="padding:8px;" src="images/login-icon1.png"></span><input type="text" value="账号"></p>
+                        <p style="border:#e4e4e4 1px solid"><span><img style="padding:7px 8px 6px 9px;" src="images/login-icon2.png"></span><input type="text" value="密码"></p>
+                        <p style="border:none"><input type="submit" value="登录"><a href="#">注册</a></p>
+                    </form>
+                </div>
+                <div class="third"><a href="#" class="qq">QQ登录</a><a href="#" class="wechat">微信登录</a></div>
+                <a class="menu-icon"><img src="images/menu-cion.png" alt="img" width="30" height="30"></a>
+                <nav style="width:420px;">
+                	<ul>
+                    	<li class="active"><a href="#">交友</a></li>
+                        <li><a href="#">婚恋</a></li>
+                        <li><a href="#">个人中心</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </nav>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <div class="maincontent" style="position:relative; background:url(images/login-back.png) repeat-x left bottom; height:1258px;">
+        <div class="login-banner">
+            <img src="images/login-banner1.png" class="dt">
+            <div class="position1">
+                <p><a href="#" class="second" style="width:350px; padding-right:64px;">创建个人资料</a><a href="#" class="first" style="width:394px; padding-right:88px;">上传照片，完成注册</a></p><img src="images/login-icon7.png" style="left:156px;"><img src="images/login-icon8.png" style="left:569px;">
+            </div>
+        </div>
+    	<div class="login-content" style="height:850px;">
+        	<div class="upload-photo1">
+            	<h1>上传形象照<a href="#">跳过此步》</a></h1>
+                <p>请选择清晰美观的个人照片进行上传编辑</p>
+                <span>头像保存后，您可能需要刷新一下本页面（按F5键），才能查看最新的头像效果：<br>确保五官清晰，正面微侧皆可。勿上传裸露，模糊或他人照片：</span>
+            </div>
+            <div class="upload-photo2">
+            	<div class="left">
+                	<h3>有照片用户的关注度、成功率是无头像用户的7倍！</h3>
+					<form action="">
+                    	<input type="file" style="display:none;" name="btn_file">
+                    	<input type="button" onclick="btn_file.click();" name="get_file" value="从电脑选取照片"/>
+                    </form>
+                </div>
+            	<div class="right">
+                	<img src="images/liukong.png">
+                    <h3>照片大小25k-8M<br>尺寸不要小于2008250像素</h3>
+                </div>
+                <div class="clear"></div>
+                <!--删除注册条款-->
+            	<div class="next-block" style="margin:43px auto 0 auto; width:134px;"><input value="完成注册" type="submit"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+    </footer>
+</div>
+
+</body>
+</html>

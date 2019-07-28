@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<title>Responsive HTML5</title>
+<link href="css/style.css?v=1.1" rel="stylesheet" type="text/css" media="all">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $(this).parent().toggleClass('checked');
+            }
+            else if($(this).prop("checked") == false){
+                $(this).parent().removeClass('checked');
+            }
+        });
+    });
+</script>
+</head>
+
+<body>
+<div class="alter-head">
+	<div class="title">
+    	<span>头像设置</span>
+        <img src="images/wrong.png">
+    </div>
+    <div class="alter-left">
+        <form action="">
+            <input type="file" style="display:none;" name="btn_file">
+            <input type="button" onclick="btn_file.click();" name="get_file" value="从电脑选取照片"/>
+        </form>
+        <h1>只支持JPG、PNG、大小不超过5M</h1>
+    </div>
+    <div class="alter-right">
+    	<h2>预览</h2>
+        <div class="big">
+            <p></p>
+            <span>170PX X 170PX</span>
+        </div>
+        <div class="middle">
+            <p></p>
+            <span>100PX X 100PX</span>
+        </div>
+        <div class="small">
+            <p></p>
+            <span>50PX X 50PX</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="alter-bottom">
+    	<a href="#" class="left">确定</a>
+    	<a href="#" class="right">取消</a>
+    </div>
+</div>
+</body>
+</html>

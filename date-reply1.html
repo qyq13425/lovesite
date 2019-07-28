@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<title>Responsive HTML5</title>
+
+<!-- SET: FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+<!-- END: FAVICON -->
+
+<!-- SET: STYLESHEET -->
+<link href="css/file_upload.css" rel="stylesheet" />
+<link href="css/style.css?v=1.1" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<!-- END: STYLESHEET -->
+
+<!-- SET: SCRIPTS -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$( "#datepicker" ).datepicker({
+		  numberOfMonths: 2,
+		  showButtonPanel: true
+		});
+  });
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $(this).parent().toggleClass('checked');
+            }
+            else if($(this).prop("checked") == false){
+                $(this).parent().removeClass('checked');
+            }
+        });
+		$('.menu-icon').click(function(e) {
+           $('nav ul').slideToggle(); 
+        });
+		$('.bar-percentage[data-percentage]').each(function () {
+	  var progress = $(this);
+	  var percentage = Math.ceil($(this).attr('data-percentage'));
+	  $({countNum: 0}).animate({countNum: percentage}, {
+		duration: 2000,
+		easing:'linear',
+		step: function() {
+		  // What todo on every count
+		  var pct = Math.floor(this.countNum) ;
+		  progress.text(pct) && progress.parent().siblings().children().css('width',pct+'%');
+		}
+	  });
+	});
+    });
+</script>
+<!-- END: SCRIPTS -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+<!-- wrapper starts -->
+<div class="wrapper">
+    <!-- Header Starts -->
+    <header>
+    	<div class="container">
+        	<div class="header-in">
+            	<div class="logo logo1"><a href="#"><img src="images/logo.png" alt="img"></a></div>
+                <a class="menu-icon"><img src="images/menu-cion.png" alt="img" width="30" height="30"></a>
+                <nav>
+                	<ul class="nav1">
+                        <li><a href="#">交友</a></li>
+                        <li><a href="#">婚恋</a></li>
+                        <li class="active"><a href="#">个人中心</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </nav>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <!-- Header ends -->
+    
+    
+    <div class="feature-nav">
+    	<div class="container">	
+        	<div class="nav-in nav-in1">
+            	<ul>
+                	<li><a href="#">消息</a></li>
+                    <li><a href="#">站内信</a></li>
+                    <li><a href="#">通知</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!-- maincontent Starts -->
+    
+    <!-- maincontent ends -->
+    <div class="admin-section">
+    	<div class="container">
+        	<div class="admin-in">
+            	<div class="admin-nav">	
+                	<ul>
+                    	<li><a href="#">首页</a></li>
+                        <li><a href="#">求约会</a></li>
+                        <li class="no_bg"><a href="#">应答约会</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="card_main">
+                	<div class="card_left">
+                    	<div class="second_step">
+                        	<h2>第一步  协议</h2>
+                            <div class="precentage1">
+                            	<div class="progress_bar">
+                                        <h6>目前进度</h6>
+                                        <div class="bar-container">
+                                           <div class="bar"></div>
+                                           
+                                        </div>
+                                        <div class="profile_com">
+                                           <em>+</em><span class="bar-percentage" data-percentage="26">25</span>
+                                            <small>%</small>
+                                        </div>
+                                    </div>
+                             </div>
+                            <div class="clear"></div>   
+                        </div>	
+                        <section class="release_info">
+                           <p>1:用户在申请使用酷巢同城交友服务时，必须符合已经年满十八周岁的条件，能够对自己的行为有正确的理解和认识，并对自己的行为承担全部责任。</p>
+                           <p>2:为保证用户权益，在酷巢同城交友注册用户需是本人征友行为，不接受代为征友或征婚的注册。用户保证将提供真实、详尽、准确的个人资料，在上述资料发生任何变动时，必须及时更新。</p>
+                           <p>3:注册成功后，用户有义务保证密码及账户的安全，不应将其账户、密码转让或出借给他人使用，并对以其账户进行的所有活动和事件负法律责任。用户的密码或账户遭到未获授权的使用，或者发生其它任何安全问题时，用户应立即通知酷巢同城交友。</p>
+                           <p>4：用户承诺对其发布的内容承担责任，在使用酷巢同城交友服务过程中会遵循以下原则：</p>
+                           <p>（1）遵守中国有关的政策、法律和法规； （2）遵守所有与网络服务有关的网络协议、规定和程序； （3）不得为任何非法目的而使用网络服务系统； （4）不得上传、展示或传播任何虚假的、骚扰性的、中伤他人的、辱骂性的、恐吓性的、庸俗淫秽的或其他任何非法的信息资料或网络链接； （5）不得侵犯其他任何第三方的专利权、著作权、商标权、名誉权或其他任何合法权益； （6）不得利用酷巢同城交友网络服务系统进行任何不利于酷巢同城交友的行为。 </p>
+                           <p>5：用户有妥善保管个人账户和密码的义务，如因用户未能履行该义务而将酷巢同城交友个人账户密码告知他人或与他人共享注册账户，由此导致的任何个人资料泄露或其他损失，酷巢同城交友对此不承担任何责任。</p>
+                           <p>6：对于用户上传的照片、资料、信息、传送的内容，酷巢同城交友会尽合理努力按照国家有关规定严格审查。但用户应理解酷巢同城交友的审核程序无法完全控制经由网站服务传送的内容，因此酷巢同城交友不对上述资料和内容的真实性、准确性、完整性、可靠性等做任何保证。在任何情况下，酷巢同城交友均不为用户经由网站服务张贴、发布、传送的任何内容负责。酷巢同城交友认为用户的行为违反国家法律法规或本协议时，有权采取相应行动，包括但不限于删除用户发布的内容，暂停或终止用户使用网站服务的全部或部分内容，保存有关记录，在必要时向有关机关报告并配合有关机关的行动。</p>
+                           <p>7：协议、保证或声明，完全为用户自主判断、自愿选择的行为，用户应当对上述行为承担全部责任。用户因此而遭受的任何性质的损失或损害，酷巢同城交友不负任何法律责任。酷巢同城交友在此郑重提示用户，网络交友谨防上当受骗，请阅读本站交友防骗手册。</p>
+                           <p>8：用户可以使用酷巢同城交友服务自发成立线下交友组织、发起线下健康、合法的交友活动。用户自行发起的该类组织和活动与本网站没有任何关系，参与的用户应对自己的行为承担全部后果和责任，酷巢同城交友对此不承担任何责任。</p>
+                           <p>9：酷巢同城交友不保证交友频道界面上提供的各种外部链接指向内容的正确性、合法性或可靠性。外部链接指向的网页内容不由酷巢同城交友实际控制，当用户点击进入外部链接网站的，应当遵守该网站的规则和协议，由此而导致的任何法律争议和后果酷巢同城交友不承担责任。</p>
+                           <p>10：用户理解互联网是一个开放的环境，您上传的照片或其他资料有可能遭到其他组织或个人的复制、转载、擅改或其他非法使用。用户必须充分知悉此类风险的存在，酷巢同城交友对此不承担任何责任。</p>
+                           <p>11：酷巢同城交友不对因国家政策或法规变化、自然灾害、战争、黑客袭击、电脑病毒、网络故障、电信部门技术调整、政府管制而造成网站的暂时性关闭等任何影响网络正常运营的不可抗力事件，以及他人蓄意破坏、正常的系统维护、系统升级，或者因网络拥塞而导致信息及数据提供的延误、停滞或错误，以及使用者由此受到的一切损失承担任何责任。</p>
+                            <div class="check-block" style="padding-bottom:0px;">
+                              <label class="">
+                                 <input type="checkbox">我同意上述协议
+                              </label>
+                            </div>
+                            <div class="card_info">
+                               <input class="next" type="submit" value="下一步">
+                            </div>
+                      </section>
+                    </div>
+                    <!--此处右侧栏文字信息有修改-->
+                    <section class="card_right">
+                    	<h2>关于应答约会</h2>	
+                        <div class="card_list">
+                        	<section class="appoint">
+                            	<h3>应答约会时，你需要填写三个步骤：</h3>
+                            	<ul>
+                                	<li><a href="#">1：同意我们的协议；</a></li>
+                                    <li><a href="#">2：填写个人信息；</a></li>
+                                    <li><a href="#">3：提交应答卡片；</a></li>
+                                </ul>	
+                            </section>
+                            <section class="appoint">
+                            	<h3>当你的应答卡片提交后，你可以：</h3>
+                            	<ul>
+                                	<li><a href="#">1：在<span>个人中心</span>查看“我应答的约会” ;</a></li>
+                                    <li><a href="#">2：在约会卡片详情页留言给发起人；</a></li>
+                                </ul>	
+                            </section>
+                            <div class="appoint_cnt">
+                                <h3>可能出现的结果：</h3>
+                                <p>1：若发起人选择你为约会对象，系统将通过消息将发起人的联系方式</p>
+                                <p>2：若发起人未选择你为约会对象，你仍可以在约会卡片详情页进行留言；</p>
+                                <p>3：若发起人取消约会，该卡片将被锁定，无法进行应答与留言；</p>
+                                <p>4：若发起人未能在截止日期前选择约会对象，该卡片将被锁定，无法进行应答与留言；</p>
+                            </div>
+                            <div class="appoint_cnt">
+                            	<p>你可以在应答约会的选项中<a href="#">选择匿名应约</a>，这样其他人就看不到你的应约卡片了；</p>	
+                            </div>
+                        </div>
+                    </section>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer starts -->
+    <footer>
+    </footer>
+    <!-- footer ends -->
+</div>
+<!-- wrapper ends -->
+<script src="js/assets/jquery.ui.widget.js"></script>
+<script src="js/assets/jquery.iframe-transport.js"></script>
+<script src="js/assets/jquery.fileupload.js"></script>
+<script src="js/assets/script.js"></script>
+
+</body>
+</html>

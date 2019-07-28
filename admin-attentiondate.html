@@ -1,0 +1,513 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<title>Responsive HTML5</title>
+
+<!-- SET: FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+<!-- END: FAVICON -->
+
+<!-- SET: STYLESHEET -->
+<link href="css/style.css?v=1.1" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/dd.css">
+<link rel="stylesheet" type="text/css" href="css/font.css">
+<!-- END: STYLESHEET -->
+
+<!-- SET: SCRIPTS -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.dd.js"></script>
+<script type="text/javascript" src="js/tytabs.jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("select").msDropdown();
+		 $("#tabsholder").tytabs({
+			tabinit:"1",
+			fadespeed:"fast"
+		 })
+		 $('.menu-icon').click(function(e) {
+           $('nav ul').slideToggle(); 
+        });
+		
+		$('.bar-percentage[data-percentage]').each(function () {
+	  var progress = $(this);
+	  var percentage = Math.ceil($(this).attr('data-percentage'));
+	  $({countNum: 0}).animate({countNum: percentage}, {
+		duration: 2000,
+		easing:'linear',
+		step: function() {
+		  // What todo on every count
+		  var pct = Math.floor(this.countNum) ;
+		  progress.text(pct) && progress.parent().siblings().children().css('width',pct+'%');
+		}
+	  });
+	});
+		
+   });
+</script>
+<!-- END: SCRIPTS -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js">
+</script>
+<![endif]-->
+</head>
+
+<body>
+
+<!-- wrapper starts -->
+<div class="wrapper">
+    <!-- Header Starts -->
+    <header>
+    	<div class="container">
+        	<div class="header-in">
+            	<div class="logo logo1"><a href="#"><img src="images/logo.png" alt="img"></a></div>
+                <a class="menu-icon"><img src="images/menu-cion.png" alt="img" width="30" height="30"></a>
+                <nav>
+                	<ul class="nav1">
+                        <li><a href="#">交友</a></li>
+                        <li><a href="#">婚恋</a></li>
+                        <li class="active"><a href="#">个人中心</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </nav>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <!-- Header ends -->
+    
+    
+    <div class="feature-nav">
+    	<div class="container">	
+        	<div class="nav-in nav-in1">
+            	<ul>
+                	<li><a href="#">消息</a></li>
+                    <li><a href="#">站内信</a></li>
+                    <li><a href="#">通知</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!-- maincontent Starts -->
+    
+    <!-- maincontent ends -->
+    <div class="admin-section">
+    	<div class="container">
+        	<div class="admin-in">
+            	<div class="admin-nav">	
+                	<ul>
+                    	<li><a href="#">首页</a></li>
+                        <li class="no_bg"><a href="#">个人中心</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="admin-content">
+                	<div class="admin-left">
+                    	<em><img src="images/girl-img.png" alt="img" width="170" height="170"></em>
+                        <strong>vivian</strong>
+                        <span><a href="#">更换头像</a></span>
+                        <ul>
+                        	<li><a href="#">个人资料</a></li>
+                            <li><a href="#">我的相册</a></li>
+                            <li class="active"><a href="#">我的关注</a></li>
+                            <li><a href="#">我的评论</a></li>
+                            <li><a href="#">我的约会</a></li>
+                            <li><a href="#">我的恋爱</a></li>
+                            <li><a href="#">我的小伙伴</a></li>
+                            <li><a href="#">我的树洞</a></li>
+                            <li class="no_border"><a href="#">我的爱秀</a></li>
+                        </ul>
+                    </div>
+                    <div class="admin-right" id="tabsholder">
+                    	<div class="tab-nav">
+                        	<ul class="tabs">
+                            	<li id="tab1"><a>我关注的约会</a></li>
+                            	<li id="tab2"><a>我关注的恋爱</a></li>
+                                <li class="no_border" id="tab3"><a>我关注的用户</a></li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="tab-content tabscontent" id="content1" style="padding:0">
+                        	<div class="myfocus-block">
+                                <ul>
+                                    <li class="active">
+                                    	<div class="focus-top">
+                                            <img src="images/yhxq_tx4.png" />
+                                            <div class="num2">
+                                                <small>9</small>
+                                            </div>
+                                            <h1>周六一起看电影</h1>
+                                            <h2>一朵</h2>
+                                            <h2>2016.1.1</h2>
+                                        </div>
+                                        <div class="focus-bottom">
+                                            <section class="heat-con">
+                                                <h5>应答<span>3</span>人</h5>
+                                                <h5>评价<span>11</span>人</h5>
+                                            </section>
+                                            <div class="arr-con1">
+                                                <a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="focus-top">
+                                            <img src="images/yhxq_tx4.png" />
+                                            <div class="num2">
+                                                <small>9</small>
+                                            </div>
+                                            <h1>周六一起看电影</h1>
+                                            <h2>一朵</h2>
+                                            <h2>2016.1.1</h2>
+                                        </div>
+                                        <div class="focus-bottom">
+                                            <section class="heat-con">
+                                                <h5>应答<span>3</span>人</h5>
+                                                <h5>评价<span>11</span>人</h5>
+                                            </section>
+                                            <div class="arr-con1">
+                                                <a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="focus-top">
+                                            <img src="images/yhxq_tx4.png" />
+                                            <div class="num2">
+                                                <small>9</small>
+                                            </div>
+                                            <h1>周六一起看电影</h1>
+                                            <h2>一朵</h2>
+                                            <h2>2016.1.1</h2>
+                                        </div>
+                                        <div class="focus-bottom">
+                                            <section class="heat-con">
+                                                <h5>应答<span>3</span>人</h5>
+                                                <h5>评价<span>11</span>人</h5>
+                                            </section>
+                                            <div class="arr-con1">
+                                                <a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="focus-top">
+                                            <img src="images/yhxq_tx4.png" />
+                                            <div class="num2">
+                                                <small>9</small>
+                                            </div>
+                                            <h1>周六一起看电影</h1>
+                                            <h2>一朵</h2>
+                                            <h2>2016.1.1</h2>
+                                        </div>
+                                        <div class="focus-bottom">
+                                            <section class="heat-con">
+                                                <h5>应答<span>3</span>人</h5>
+                                                <h5>评价<span>11</span>人</h5>
+                                            </section>
+                                            <div class="arr-con1">
+                                                <a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="focus-top">
+                                            <img src="images/yhxq_tx4.png" />
+                                            <div class="num2">
+                                                <small>9</small>
+                                            </div>
+                                            <h1>周六一起看电影</h1>
+                                            <h2>一朵</h2>
+                                            <h2>2016.1.1</h2>
+                                        </div>
+                                        <div class="focus-bottom">
+                                            <section class="heat-con">
+                                                <h5>应答<span>3</span>人</h5>
+                                                <h5>评价<span>11</span>人</h5>
+                                            </section>
+                                            <div class="arr-con1">
+                                                <a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="focus-top">
+                                            <img src="images/yhxq_tx4.png" />
+                                            <div class="num2">
+                                                <small>9</small>
+                                            </div>
+                                            <h1>周六一起看电影</h1>
+                                            <h2>一朵</h2>
+                                            <h2>2016.1.1</h2>
+                                        </div>
+                                        <div class="focus-bottom">
+                                            <section class="heat-con">
+                                                <h5>应答<span>3</span>人</h5>
+                                                <h5>评价<span>11</span>人</h5>
+                                            </section>
+                                            <div class="arr-con1">
+                                                <a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="focus-top">
+                                            <img src="images/yhxq_tx4.png" />
+                                            <div class="num2">
+                                                <small>9</small>
+                                            </div>
+                                            <h1>周六一起看电影</h1>
+                                            <h2>一朵</h2>
+                                            <h2>2016.1.1</h2>
+                                        </div>
+                                        <div class="focus-bottom">
+                                            <section class="heat-con">
+                                                <h5>应答<span>3</span>人</h5>
+                                                <h5>评价<span>11</span>人</h5>
+                                            </section>
+                                            <div class="arr-con1">
+                                                <a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="focus-top">
+                                            <img src="images/yhxq_tx4.png" />
+                                            <div class="num2">
+                                                <small>9</small>
+                                            </div>
+                                            <h1>周六一起看电影</h1>
+                                            <h2>一朵</h2>
+                                            <h2>2016.1.1</h2>
+                                        </div>
+                                        <div class="focus-bottom">
+                                            <section class="heat-con">
+                                                <h5>应答<span>3</span>人</h5>
+                                                <h5>评价<span>11</span>人</h5>
+                                            </section>
+                                            <div class="arr-con1">
+                                                <a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-content tabscontent" id="content2" style="padding:0">
+                        	<div class="myfocus-block">
+                                <ul>
+                                    <li class="active">
+                                    	<div class="focus-top">
+                                            <img src="images/yhxq_tx4.png" />
+                                            <div class="num2">
+                                                <small>9</small>
+                                            </div>
+                                            <h1>周六一起看电影</h1>
+                                            <h2>一朵</h2>
+                                            <h2>2016.1.1</h2>
+                                        </div>
+                                        <div class="focus-bottom">
+                                            <section class="heat-con">
+                                                <h5>应答<span>3</span>人</h5>
+                                                <h5>评价<span>11</span>人</h5>
+                                            </section>
+                                            <div class="arr-con1">
+                                                <a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="focus-top">
+                                            <img src="images/yhxq_tx4.png" />
+                                            <div class="num2">
+                                                <small>9</small>
+                                            </div>
+                                            <h1>周六一起看电影</h1>
+                                            <h2>一朵</h2>
+                                            <h2>2016.1.1</h2>
+                                        </div>
+                                        <div class="focus-bottom">
+                                            <section class="heat-con">
+                                                <h5>应答<span>3</span>人</h5>
+                                                <h5>评价<span>11</span>人</h5>
+                                            </section>
+                                            <div class="arr-con1">
+                                                <a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="focus-top">
+                                            <img src="images/yhxq_tx4.png" />
+                                            <div class="num2">
+                                                <small>9</small>
+                                            </div>
+                                            <h1>周六一起看电影</h1>
+                                            <h2>一朵</h2>
+                                            <h2>2016.1.1</h2>
+                                        </div>
+                                        <div class="focus-bottom">
+                                            <section class="heat-con">
+                                                <h5>应答<span>3</span>人</h5>
+                                                <h5>评价<span>11</span>人</h5>
+                                            </section>
+                                            <div class="arr-con1">
+                                                <a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="focus-top">
+                                            <img src="images/yhxq_tx4.png" />
+                                            <div class="num2">
+                                                <small>9</small>
+                                            </div>
+                                            <h1>周六一起看电影</h1>
+                                            <h2>一朵</h2>
+                                            <h2>2016.1.1</h2>
+                                        </div>
+                                        <div class="focus-bottom">
+                                            <section class="heat-con">
+                                                <h5>应答<span>3</span>人</h5>
+                                                <h5>评价<span>11</span>人</h5>
+                                            </section>
+                                            <div class="arr-con1">
+                                                <a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="focus-top">
+                                            <img src="images/yhxq_tx4.png" />
+                                            <div class="num2">
+                                                <small>9</small>
+                                            </div>
+                                            <h1>周六一起看电影</h1>
+                                            <h2>一朵</h2>
+                                            <h2>2016.1.1</h2>
+                                        </div>
+                                        <div class="focus-bottom">
+                                            <section class="heat-con">
+                                                <h5>应答<span>3</span>人</h5>
+                                                <h5>评价<span>11</span>人</h5>
+                                            </section>
+                                            <div class="arr-con1">
+                                                <a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="focus-top">
+                                            <img src="images/yhxq_tx4.png" />
+                                            <div class="num2">
+                                                <small>9</small>
+                                            </div>
+                                            <h1>周六一起看电影</h1>
+                                            <h2>一朵</h2>
+                                            <h2>2016.1.1</h2>
+                                        </div>
+                                        <div class="focus-bottom">
+                                            <section class="heat-con">
+                                                <h5>应答<span>3</span>人</h5>
+                                                <h5>评价<span>11</span>人</h5>
+                                            </section>
+                                            <div class="arr-con1">
+                                                <a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="focus-top">
+                                            <img src="images/yhxq_tx4.png" />
+                                            <div class="num2">
+                                                <small>9</small>
+                                            </div>
+                                            <h1>周六一起看电影</h1>
+                                            <h2>一朵</h2>
+                                            <h2>2016.1.1</h2>
+                                        </div>
+                                        <div class="focus-bottom">
+                                            <section class="heat-con">
+                                                <h5>应答<span>3</span>人</h5>
+                                                <h5>评价<span>11</span>人</h5>
+                                            </section>
+                                            <div class="arr-con1">
+                                                <a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="focus-top">
+                                            <img src="images/yhxq_tx4.png" />
+                                            <div class="num2">
+                                                <small>9</small>
+                                            </div>
+                                            <h1>周六一起看电影</h1>
+                                            <h2>一朵</h2>
+                                            <h2>2016.1.1</h2>
+                                        </div>
+                                        <div class="focus-bottom">
+                                            <section class="heat-con">
+                                                <h5>应答<span>3</span>人</h5>
+                                                <h5>评价<span>11</span>人</h5>
+                                            </section>
+                                            <div class="arr-con1">
+                                                <a href="#"><img src="images/arrow1.png" alt="img" width="8" height="15"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-content tabscontent" id="content3" style="padding:0">
+                        	<div class="focuser-block">
+                                <ul>
+                                    <li class="active"><img src="images/yhxq_tx4.png" /><h1>小白铲屎官</h1><p><span></span>被<em>19408</em>人关注</p><a href="#">查看详情</a></li>
+                                    <li><img src="images/yhxq_tx4.png" /><h1>小白铲屎官</h1><p><span></span>被<em>19408</em>人关注</p><a href="#">查看详情</a></li>
+                                    <li><img src="images/yhxq_tx4.png" /><h1>小白铲屎官</h1><p><span></span>被<em>19408</em>人关注</p><a href="#">查看详情</a></li>
+                                    <li style="margin-right:0"><img src="images/yhxq_tx4.png" /><h1>小白铲屎官</h1><p><span></span>被<em>19408</em>人关注</p><a href="#">查看详情</a></li>
+                                    <li><img src="images/yhxq_tx4.png" /><h1>小白铲屎官</h1><p><span></span>被<em>19408</em>人关注</p><a href="#">查看详情</a></li>
+                                    <li><img src="images/yhxq_tx4.png" /><h1>小白铲屎官</h1><p><span></span>被<em>19408</em>人关注</p><a href="#">查看详情</a></li>
+                                    <li><img src="images/yhxq_tx4.png" /><h1>小白铲屎官</h1><p><span></span>被<em>19408</em>人关注</p><a href="#">查看详情</a></li>
+                                    <li style="margin-right:0"><img src="images/yhxq_tx4.png" /><h1>小白铲屎官</h1><p><span></span>被<em>19408</em>人关注</p><a href="#">查看详情</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <!--此处有改动 改成了分页栏-->
+                    <div class="fanye-block" style="margin-top:30px;">
+                        <ul>
+                            <li><a href="#" class="active" style="width:54px;">首页</a></li>
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#" class="active" style="width:54px;">尾页</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer starts -->
+    <footer>
+    </footer>
+    <!-- footer ends -->
+</div>
+<!-- wrapper ends -->
+
+</body>
+</html>

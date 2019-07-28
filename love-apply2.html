@@ -1,0 +1,432 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<title>Responsive HTML5</title>
+
+<!-- SET: FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+<!-- END: FAVICON -->
+
+<!-- SET: STYLESHEET -->
+<link href="css/file_upload.css" rel="stylesheet" />
+<link href="css/style.css?v=1.1" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="css/dd.css">
+<!-- END: STYLESHEET -->
+
+<!-- SET: SCRIPTS -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.dd.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("select").msDropdown();
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $(this).parent().toggleClass('checked');
+            }
+            else if($(this).prop("checked") == false){
+                $(this).parent().removeClass('checked');
+            }
+        });
+		$('.menu-icon').click(function(e) {
+           $('nav ul').slideToggle(); 
+        });
+		$('.bar-percentage[data-percentage]').each(function () {
+	  var progress = $(this);
+	  var percentage = Math.ceil($(this).attr('data-percentage'));
+	  $({countNum: 0}).animate({countNum: percentage}, {
+		duration: 2000,
+		easing:'linear',
+		step: function() {
+		  // What todo on every count
+		  var pct = Math.floor(this.countNum) ;
+		  progress.text(pct) && progress.parent().siblings().children().css('width',pct+'%');
+		}
+	  });
+	});
+    });
+</script>
+<!-- END: SCRIPTS -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+<!-- wrapper starts -->
+<div class="wrapper">
+    <!-- Header Starts -->
+    <header>
+    	<div class="container">
+        	<div class="header-in">
+            	<div class="logo"><a href="#"><img src="images/logo.png" alt="img"></a></div>
+                <a class="menu-icon"><img src="images/menu-cion.png" alt="img" width="30" height="30"></a>
+                <nav>
+                	<ul class="nav1">
+                        <li><a href="#">交友</a></li>
+                        <li><a href="#">婚恋</a></li>
+                        <li class="active"><a href="#">个人中心</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </nav>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <!-- Header ends -->
+    
+    
+    <div class="feature-nav">
+    	<div class="container">	
+        	<div class="nav-in nav-in1">
+            	<ul>
+                	<li><a href="#">消息</a></li>
+                    <li><a href="#">站内信</a></li>
+                    <li><a href="#">通知</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!-- maincontent Starts -->
+    
+    <!-- maincontent ends -->
+    <div class="admin-section">
+    	<div class="container">
+        	<div class="admin-in">
+            	<div class="admin-nav">	
+                	<ul>
+                    	<li><a href="#">首页</a></li>
+                        <li><a href="#">求约会</a></li>
+                        <li class="no_bg"><a href="#">报名恋爱</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="card_main">
+                	<div class="card_left">
+                    	<div class="second_step">
+                        	<h2>第二步 填写个人信息</h2>
+                            <div class="precentage1">
+                            	<div class="progress_bar">
+                                    <h6>目前进度</h6>
+                                    <div class="bar-container">
+                                       <div class="bar"></div>
+                                    </div>
+                                    <div class="profile_com">
+                                       <em>+</em><span class="bar-percentage" data-percentage="51">51</span>
+                                        <small>%</small>
+                                    </div>
+                                </div>
+                             </div>
+                            <div class="clear"></div>   
+                        </div>	
+                        <section class="card_info" style=" padding-top:50px; padding-bottom:106px;">
+                            <div class="date-form" style="background:none;">
+                                <ul>
+                                    <li>
+                                        <div class="field-block">
+                                            <input type="text" class="text-field1" value="昵称" onClick="if(this.value=='昵称'){this.value=''}" onBlur="if(this.value==''){this.value='昵称'}"/ style="width:160px;">
+                                             <div class="check-block" style="padding:0px 0px 0px 20px; display:inline-block; float:left; padding-top:10px; line-height:28px; margin-left:20px;">
+                                            <label style="width:100%;">
+                                                <input type="checkbox">匿名发布
+                                            </label>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                         <div class="clear"></div>
+                                    </li>
+                                    <li class="clear"></li>
+                                    <li>
+                                        <div class="select-block1">
+                                            <select class="select1" style="width:100%">
+                                                <option>性别</option>
+                                                <option value="option1">option1</option>
+                                                <option value="option2">option2</option>
+                                                <option value="option3">option3</option>
+                                                <option value="option4">option4</option>
+                                            </select>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="select-block1">
+                                            <select class="select1" style="width:100%">
+                                                <option>身高</option>
+                                                <option value="option1">option1</option>
+                                                <option value="option2">option2</option>
+                                                <option value="option3">option3</option>
+                                                <option value="option4">option4</option>
+                                            </select>
+                                        </div>
+                                         <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="select-block1">
+                                            <select class="select1" style="width:100%">
+                                                <option>体重</option>
+                                                <option value="option1">option1</option>
+                                                <option value="option2">option2</option>
+                                                <option value="option3">option3</option>
+                                                <option value="option4">option4</option>
+                                            </select>
+                                        </div>
+                                         <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="select-block1">
+                                            <select class="select1" style="width:100%">
+                                                <option>年龄</option>
+                                                <option value="option1">option1</option>
+                                                <option value="option2">option2</option>
+                                                <option value="option3">option3</option>
+                                                <option value="option4">option4</option>
+                                            </select>
+                                        </div>
+                                         <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="select-block1">
+                                            <select class="select1" style="width:100%">
+                                                <option>星座</option>
+                                                <option value="option1">option1</option>
+                                                <option value="option2">option2</option>
+                                                <option value="option3">option3</option>
+                                                <option value="option4">option4</option>
+                                            </select>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="select-block1">
+                                            <select class="select1" style="width:100%">
+                                                <option>血型</option>
+                                                <option value="option1">option1</option>
+                                                <option value="option2">option2</option>
+                                                <option value="option3">option3</option>
+                                                <option value="option4">option4</option>
+                                            </select>
+                                        </div>
+                                         <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="select-block1">
+                                            <select class="select1" style="width:100%">
+                                                <option>职业</option>
+                                                <option value="option1">option1</option>
+                                                <option value="option2">option2</option>
+                                                <option value="option3">option3</option>
+                                                <option value="option4">option4</option>
+                                            </select>
+                                        </div>
+                                         <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="select-block1">
+                                            <select class="select1" style="width:100%">
+                                                <option>收入</option>
+                                                <option value="option1">option1</option>
+                                                <option value="option2">option2</option>
+                                                <option value="option3">option3</option>
+                                                <option value="option4">option4</option>
+                                            </select>
+                                        </div>
+                                         <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="select-block1">
+                                            <select class="select1" style="width:100%">
+                                                <option>学历</option>
+                                                <option value="option1">option1</option>
+                                                <option value="option2">option2</option>
+                                                <option value="option3">option3</option>
+                                                <option value="option4">option4</option>
+                                            </select>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                    <!--新加的民族选项内容同个人中心详细资料页-->
+                                        <div class="select-block1">
+                                            <select class="select1" style="width:100%">
+                                                <option>民族</option>
+                                                <option value="option1">option1</option>
+                                                <option value="option2">option2</option>
+                                                <option value="option3">option3</option>
+                                                <option value="option4">option4</option>
+                                            </select>
+                                        </div>
+                                         <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="select-block1">
+                                            <select class="select1" style="width:100%">
+                                                <option>是否抽烟</option>
+                                                <option value="option1">option1</option>
+                                                <option value="option2">option2</option>
+                                                <option value="option3">option3</option>
+                                                <option value="option4">option4</option>
+                                            </select>
+                                        </div>
+                                         <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="select-block1">
+                                            <select class="select1" style="width:100%">
+                                                <option>是否饮酒</option>
+                                                <option value="option1">option1</option>
+                                                <option value="option2">option2</option>
+                                                <option value="option3">option3</option>
+                                                <option value="option4">option4</option>
+                                            </select>
+                                        </div>
+                                         <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="field-block">
+                                            <input type="text" class="text-field1" value="手机号码" onClick="if(this.value=='昵称'){this.value=''}" onBlur="if(this.value==''){this.value='昵称'}"/ style="width:160px;">
+                                            <div class="clear"></div>
+                                        </div>
+                                         <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="field-block">
+                                            <input type="text" class="text-field1" value="在线联系方式" onClick="if(this.value=='昵称'){this.value=''}" onBlur="if(this.value==''){this.value='昵称'}"/ style="width:160px;">
+                                            <div class="clear"></div>
+                                        </div>
+                                         <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                    	<strong>（仅发起人可见）</strong>
+                                    </li>
+                                    <li class="clear"></li>
+                                    <!--兴趣爱好改到了下面-->
+                                    <li style="margin-top:0px; width:100%;">
+                                        <p>兴趣爱好：</p>
+                                        <div class="check-block1" style="float:left; margin-left:5%;">
+                                            <div class="block">
+                                            	<label style="padding:0 0 0 30px;font-family:宋体;"><input type="checkbox" >看电影</label>
+                                            </div>
+                                            <div class="block">
+                                            	<label style="padding:0 0 0 30px;font-family:宋体;"><input type="checkbox" >听音乐</label>
+                                            </div>
+                                            <br>
+                                            <div class="block">
+                                            	<label style="padding:0 0 0 30px;font-family:宋体;"><input type="checkbox" >健身</label>
+                                            </div>
+                                            <div class="block">
+                                            	<label style="padding:0 0 0 30px;font-family:宋体;"><input type="checkbox" >烹饪</label>
+                                            </div>
+                                            <div class="block">
+                                            	<label style="padding:0 0 0 30px;font-family:宋体;"><input type="checkbox" >旅行</label>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li class="clear"></li>
+                                    <li style="margin-left:12%;">
+                                    	<div class="more">
+                                    		其他<input type="text" class="text-field1">
+                                    	</div>
+                                    </li>
+                                </ul>
+                            	<div class="clear"></div>
+							</div>
+                            <section class="txt-content" style="margin-top:40px; padding:0">
+                                <h6>用几句话简单的介绍一下自己，让对方更加了解你<span>比如平时喜欢去什么地方，喜欢的恋爱方式有哪些等等</span></h6>
+                                <div class="clear"></div>
+                                <div class="txt-con">
+                                    <textarea  name="fmsg" id="fmsg" class="textarea" onblur="if(this.value==''){this.value=''}" onfocus="if(this.value==''){this.value=''}" rows="5" cols="5" style="width:90%;"></textarea>
+                                    <small>限20-500字，目前已输入<span>0</span>字，您还可以输入<span>500</span>字</small>
+                                </div>
+                            </section>
+                            <section class="upload-block">
+                            	<h6>上传图片:</h6>
+                                <div class="file_upload" style="width:315px; ">
+                                    <form id="upload" method="post" action="upload.php" enctype="multipart/form-data">
+                                        <ul>
+                                            <!-- The file uploads will be shown here -->
+                                        </ul>
+                                        <div id="drop"><a>上传</a><input type="file" name="upl" multiple /></div>
+                                    </form>
+                                </div>
+                                <div class="clear"></div>
+                                <!--新增提示-->
+								<strong>* 首张照片设置为封面</strong>
+                            </section>
+							<script type="text/javascript">
+                              $(document).ready(function(){
+                              $(".section ul li .rsp").hide();
+                              $(".section	 ul li").hover(function(){
+                              $(this).find(".rsp").stop().fadeTo(500,0.5)
+                              $(this).find(".text").stop().animate({left:'0'}, {duration: 500})
+                             },function(){
+                              $(this).find(".rsp").stop().fadeTo(500,0)
+                              $(this).find(".text").stop().animate({left:'318'}, {duration: "fast"})
+                              $(this).find(".text").animate({left:'-318'}, {duration: 0})
+                              });
+
+                              });
+							</script>
+							<input type="submit" value="提交" class="next" style="margin-top:60px;">
+                        
+                        </section>
+                    </div>
+                    <section class="card_right">
+                    	<h2>关于报名恋爱</h2>	
+                        <div class="card_list">
+                        	<section class="appoint">
+                            	<h3>报名恋爱时，你需要填写三个步骤：</h3>
+                            	<ul>
+                                	<li><a href="#">1 : 同意我们的协议 ;</a></li>
+                                    <li><a href="#">2 : 填写个人信息 ;</a></li>
+                                    <li><a href="#">3 : 提交报名卡片 ;</a></li>
+                                </ul>	
+                            </section>
+                            <section class="appoint">
+                            	<h3>当你的报名卡片提交后，你可以:</h3>
+                            	<ul>
+                                	<li><a href="#">1 : 在<span>个人中心</span>查看“我报名的恋爱” ;</a></li>
+                                    <li><a href="#">2 : 在恋爱卡片详情页留言给发起人;</a></li>
+                                </ul>	
+                            </section>
+                            <section class="appoint">
+                            	<h3 style="padding:0 0 10px 0">请注意：</h3>
+                            	<ul>
+                                	<li><a href="#" style="line-height:25px;">1 : 发起人可随时选择更新卡片内容，请
+您注意；</a></li>
+                                    <li><a href="#" style="line-height:25px;">2 : 发起人可随时选择关闭报名，其他人
+将不能再提交报名应答，但仍可以留言；</a></li>
+                                </ul>	
+                            </section>
+                            <div class="appoint_cnt">
+                            	<p>你可以在报名约会的选项中<a href="#">选择匿名发布</a>，这样其他人就看不到你的报名卡片了；</p>	
+                            </div>
+                        </div>
+                    </section>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer starts -->
+    <footer>
+    </footer>
+    <!-- footer ends -->
+</div>
+<script src="js/assets/jquery.ui.widget.js"></script>
+<script src="js/assets/jquery.iframe-transport.js"></script>
+<script src="js/assets/jquery.fileupload.js"></script>
+<script src="js/assets/script.js"></script>
+<!-- wrapper ends -->
+</body>
+</html>
