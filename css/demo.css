@@ -1,0 +1,17 @@
+/*	CSS for customized radio buttons and check boxes */
+.custom-radio { position: relative; margin:0;  }
+.custom-radio input {position: absolute; left: 0px; top: 0px; margin: 0; z-index: 0; float:left; opacity:0 !important; }
+
+.custom-radio label {display: block; position: relative; z-index: 1; padding-right: 1em; line-height: 1; cursor: pointer; width:20px !important; display:inline-block; }
+
+.custom-radio label { background:url(../images/check-box.jpg) no-repeat;width:18px; height:18px;  font-family: 'segoe_uisemibold';font-size:20px; color:#cccccc; margin: 0 auto; padding:0 0 0 25px; text-transform:uppercase;  }
+.custom-radio label.checked {background:url(../images/check-lable.jpg) no-repeat;}
+
+.custom-checkbox label { background:url(../images/check.png) no-repeat; font-family:Arial, Helvetica, sans-serif;font-size:14px; color:#595959;}
+.custom-checkbox label.checked{ background:url(../images/check-hover.png) no-repeat;}
+
+
+.custom-checkbox input  {position: absolute; left: 2px; top: 2px; margin: 0; z-index: 0; float:left; display:none; }
+.custom-checkbox label  {display: block; position: relative; z-index: 1; padding-right: 1em; cursor: pointer;font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#595959; line-height:14px; font-weight:400; margin:0; padding:0 0 0 18px;}
+
+.custom-checkbox { position: relative; }
